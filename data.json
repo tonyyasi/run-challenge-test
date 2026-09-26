@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-24",
-  "played": true,
-  "sharks_score": 10,
+  "date": "2026-09-25",
+  "played": false,
+  "sharks_score": 0,
   "opp_score": 0,
-  "opp_name": "ANA",
-  "goals": 10,
-  "pp_goals": 2,
-  "hat_tricks": 1,
-  "total_miles": 12.5
+  "opp_name": "",
+  "goals": 0,
+  "pp_goals": 0,
+  "hat_tricks": 0,
+  "total_miles": 0
 }
