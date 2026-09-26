@@ -1,0 +1,27 @@
+name: Daily Sharks Workout Calculation
+
+on:
+  schedule:
+    # 15:00 UTC = 7:00 AM PST or 8:00 AM PDT
+    - cron: '0 15 * * *'
+  workflow_dispatch: # Allows you to manually run it anytime to test
+
+jobs:
+  run-workout-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python sharks_runner.py
