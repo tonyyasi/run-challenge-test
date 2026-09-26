@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-25",
-  "played": false,
-  "goals": 0,
-  "pp_goals": 0,
-  "hat_tricks": 0,
-  "total_miles": 0
+  "date": "2026-09-24",
+  "played": true,
+  "goals": 10,
+  "pp_goals": 10,
+  "hat_tricks": 1,
+  "total_miles": 14.5
 }
