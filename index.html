@@ -1,244 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharks Running Challenge Dashboard</title>
-    
-    <style>
-        /* Base Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Typography and Background */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b1319; /* Deep dark background */
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        /* Main Card Container */
-        .card {
-            background: #00667c; /* Sharks Teal */
-            border: 3px solid #ea7200; /* Sharks Orange */
-            border-radius: 16px;
-            padding: 32px 24px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 102, 124, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Decorative Background Element */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
-            transform: rotate(45deg);
-            pointer-events: none;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            color: #ffffff;
-            margin-bottom: 12px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        /* Date Badge */
-        .date-badge {
-            display: inline-block;
-            background: #000000;
-            color: #ea7200;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        /* Miles Highlight Section */
-        .miles-container {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            padding: 30px 16px;
-            margin-bottom: 24px;
-            border: 1px solid rgba(234, 114, 0, 0.3);
-        }
-
-        .miles-val {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .miles-unit {
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: #e0e0e0;
-            margin-top: 12px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        /* Stats Breakdown List */
-        .stats {
-            text-align: left;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            padding: 16px 20px;
-        }
-
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 1rem;
-        }
-
-        .stat-row:last-child {
-            border-bottom: none;
-        }
-
-        .stat-label {
-            color: #d1d5db;
-            font-weight: 500;
-        }
-
-        .stat-value {
-            font-weight: 800;
-            color: #ea7200; /* Highlight numbers in orange */
-            font-size: 1.1rem;
-        }
-
-        /* Error/Status Notifications */
-        .status-msg {
-            background: rgba(0,0,0,0.6);
-            color: #ffb7b2;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            margin-top: 16px;
-            display: none;
-            border-left: 4px solid #ea7200;
-            text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharks Run Dashboard</title>
+  <style>
+    body {
+      background-color: #0b141a;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: #005a6c;
+      border: 3px solid #ea7200;
+      border-radius: 12px;
+      padding: 30px;
+      width: 340px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-transform: uppercase;
+    }
+    .date-badge {
+      background-color: #000;
+      color: #ea7200;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .score-display {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .miles-box {
+      background-color: #004554;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .miles-number {
+      font-size: 56px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .miles-label {
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .stats-box {
+      background-color: #004554;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: left;
+    }
+    .stat-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+    }
+    .stat-line:last-child {
+      border-bottom: none;
+    }
+    .stat-value {
+      font-weight: bold;
+      color: #ea7200;
+    }
+    .error-msg {
+      background-color: #111;
+      color: #ff8a8a;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
+  <div class="card">
+    <h1>🦈 SHARKS RUN<br>CHALLENGE</h1>
+    
+    <div class="date-badge" id="date-label">Checking date...</div>
 
-    <div class="card">
-        <h1>🦈 Sharks Run Challenge</h1>
-        <div class="date-badge" id="date-label">Fetching Game Data...</div>
-        
-        <div class="miles-container">
-            <div class="miles-val" id="miles-val">--</div>
-            <div class="miles-unit" id="sub-label">WAITING FOR DATA</div>
-        </div>
+    <div id="score-container" class="score-display" style="display: none;"></div>
 
-        <div class="stats" id="stats-box">
-            <div class="stat-row">
-                <span class="stat-label">Goals (1 mi each)</span>
-                <span class="stat-value" id="goals-val">-</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Power Play Goals (0.25 mi)</span>
-                <span class="stat-value" id="pp-val">-</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Hat Tricks (+2 mi)</span>
-                <span class="stat-value" id="hats-val">-</span>
-            </div>
-        </div>
-
-        <div id="status-info" class="status-msg"></div>
+    <div class="miles-box">
+      <div class="miles-number" id="miles-val">0.00</div>
+      <div class="miles-label" id="sub-label">AWAITING SYNC</div>
     </div>
 
-    <script>
-        async function loadWorkoutData() {
-            // Get references to DOM elements
-            const dateEl = document.getElementById('date-label');
-            const milesEl = document.getElementById('miles-val');
-            const subEl = document.getElementById('sub-label');
-            const statsBox = document.getElementById('stats-box');
-            const goalsEl = document.getElementById('goals-val');
-            const ppEl = document.getElementById('pp-val');
-            const hatsEl = document.getElementById('hats-val');
-            const statusInfo = document.getElementById('status-info');
+    <div class="stats-box" id="stats-box">
+      <div class="stat-line">
+        <span>Goals (1 mi each)</span>
+        <span class="stat-value" id="goals-val">0</span>
+      </div>
+      <div class="stat-line">
+        <span>Power Play Goals (0.25 mi)</span>
+        <span class="stat-value" id="pp-val">0</span>
+      </div>
+      <div class="stat-line">
+        <span>Hat Tricks (+2 mi)</span>
+        <span class="stat-value" id="hats-val">0</span>
+      </div>
+    </div>
 
-            try {
-                // Prevent caching of data.json during fetch
-                const cacheBuster = new Date().getTime();
-                const response = await fetch(`data.json?t=${cacheBuster}`);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+    <div id="status-info" class="error-msg" style="display: none;"></div>
+  </div>
 
-                const data = await response.json();
+  <script>
+    async function loadWorkoutData() {
+      const dateEl = document.getElementById('date-label');
+      const scoreEl = document.getElementById('score-container');
+      const milesEl = document.getElementById('miles-val');
+      const subEl = document.getElementById('sub-label');
+      const statsBox = document.getElementById('stats-box');
+      const goalsEl = document.getElementById('goals-val');
+      const ppEl = document.getElementById('pp-val');
+      const hatsEl = document.getElementById('hats-val');
+      const statusInfo = document.getElementById('status-info');
 
-                // Update UI with parsed data
-                dateEl.innerText = data.date ? `Game Date: ${data.date}` : 'Date Unknown';
+      try {
+        const response = await fetch('data.json?cache=' + new Date().getTime());
+        if (!response.ok) throw new Error('Could not load data.json');
+        const data = await response.json();
+        
+        dateEl.innerText = data.date ? `Game Date: ${data.date}` : "Date Unknown";
 
-                if (data.played === false) {
-                    // Scenario: No game was played
-                    milesEl.innerText = "REST";
-                    subEl.innerText = "NO GAME YESTERDAY";
-                    statsBox.style.display = "none";
-                    statusInfo.style.display = "none";
-                } else {
-                    // Scenario: Game was played, show stats
-                    milesEl.innerText = parseFloat(data.total_miles).toFixed(2);
-                    subEl.innerText = "MILES TO RUN TODAY";
-                    statsBox.style.display = "block";
-                    
-                    goalsEl.innerText = data.goals !== undefined ? data.goals : 0;
-                    ppEl.innerText = data.pp_goals !== undefined ? data.pp_goals : 0;
-                    hatsEl.innerText = data.hat_tricks !== undefined ? data.hat_tricks : 0;
-                    statusInfo.style.display = "none";
-                }
-            } catch (error) {
-                console.error("Failed to load workout data:", error);
-                
-                // Fallback display if fetch fails (e.g., file not generated yet)
-                dateEl.innerText = "Data Not Available";
-                milesEl.innerText = "0.00";
-                subEl.innerText = "AWAITING SYNC";
-                
-                // Reset stats to zero
-                goalsEl.innerText = "0";
-                ppEl.innerText = "0";
-                hatsEl.innerText = "0";
-                
-                // Show helpful error message
-                statusInfo.style.display = "block";
-                statusInfo.innerHTML = `<strong>Data Error:</strong> Could not load <em>data.json</em>.<br>Ensure the automated script has run to generate the latest stats.`;
-            }
+        if (data.played === false) {
+          milesEl.innerText = "REST";
+          subEl.innerText = "NO GAME YESTERDAY";
+          statsBox.style.display = "none";
+          statusInfo.style.display = "none";
+          scoreEl.style.display = "none";
+        } else {
+          if (data.sharks_score !== undefined && data.opp_score !== undefined) {
+            scoreEl.innerText = `SJS ${data.sharks_score} - ${data.opp_score} ${data.opp_name || 'OPP'}`;
+            scoreEl.style.display = "block";
+          }
+
+          milesEl.innerText = parseFloat(data.total_miles).toFixed(2);
+          subEl.innerText = "MILES TO RUN TODAY";
+          statsBox.style.display = "block";
+          
+          goalsEl.innerText = data.goals !== undefined ? data.goals : 0;
+          ppEl.innerText = data.pp_goals !== undefined ? data.pp_goals : 0;
+          hatsEl.innerText = data.hat_tricks !== undefined ? data.hat_tricks : 0;
+          statusInfo.style.display = "none";
         }
+      } catch (error) {
+        console.error("Failed to load workout data:", error);
+        
+        dateEl.innerText = "Data Not Available";
+        milesEl.innerText = "0.00";
+        subEl.innerText = "AWAITING SYNC";
+        
+        goalsEl.innerText = "0";
+        ppEl.innerText = "0";
+        hatsEl.innerText = "0";
 
-        // Initialize dashboard when DOM is ready
-        window.addEventListener('DOMContentLoaded', loadWorkoutData);
-    </script>
+        statusInfo.style.display = "block";
+        statusInfo.innerHTML = "<strong>Data Error:</strong> Could not load <em>data.json</em>.<br>Ensure the automated script has run to generate the latest stats.";
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', loadWorkoutData);
+  </script>
 </body>
 </html>
