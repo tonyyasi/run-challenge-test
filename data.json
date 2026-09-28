@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-26",
-  "played": true,
-  "sharks_score": 4,
-  "opp_score": 2,
-  "opp_name": "VGK",
-  "goals": 4,
-  "pp_goals": 1,
+  "date": "2026-09-27",
+  "played": false,
+  "sharks_score": 0,
+  "opp_score": 0,
+  "opp_name": "",
+  "goals": 0,
+  "pp_goals": 0,
   "hat_tricks": 0,
-  "total_miles": 4.25
+  "total_miles": 0
 }
