@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-01",
-  "played": true,
-  "sharks_score": 4,
-  "opp_score": 3,
-  "opp_name": "FLA",
-  "goals": 4,
-  "pp_goals": 1,
+  "date": "2026-10-02",
+  "played": false,
+  "sharks_score": 0,
+  "opp_score": 0,
+  "opp_name": "",
+  "goals": 0,
+  "pp_goals": 0,
   "hat_tricks": 0,
-  "total_miles": 4.25
+  "total_miles": 0
 }
