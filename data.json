@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-05",
-  "played": true,
+  "date": "2026-10-06",
+  "played": false,
   "sharks_score": 0,
-  "opp_score": 5,
-  "opp_name": "DAL",
+  "opp_score": 0,
+  "opp_name": "",
   "goals": 0,
   "pp_goals": 0,
   "hat_tricks": 0,
-  "total_miles": 0.0
+  "total_miles": 0
 }
