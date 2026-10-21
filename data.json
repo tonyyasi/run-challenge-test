@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "played": true,
-  "sharks_score": 1,
+  "sharks_score": 4,
   "opp_score": 3,
-  "opp_name": "TOR",
-  "goals": 1,
-  "pp_goals": 0,
+  "opp_name": "MTL",
+  "goals": 4,
+  "pp_goals": 2,
   "hat_tricks": 0,
-  "total_miles": 1.0
+  "total_miles": 4.5
 }
