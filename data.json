@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-21",
-  "played": false,
-  "sharks_score": 0,
-  "opp_score": 0,
-  "opp_name": "",
-  "goals": 0,
-  "pp_goals": 0,
+  "date": "2026-10-22",
+  "played": true,
+  "sharks_score": 6,
+  "opp_score": 2,
+  "opp_name": "OTT",
+  "goals": 6,
+  "pp_goals": 1,
   "hat_tricks": 0,
-  "total_miles": 0
+  "total_miles": 6.25
 }
