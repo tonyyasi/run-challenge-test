@@ -3,190 +3,1756 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sharks Run Dashboard</title>
+  <title>San Jose Sharks Running Challenge</title>
+  <link rel="icon" href="https://assets.nhle.com/logos/nhl/svg/SJS_light.svg" type="image/svg+xml">
   <style>
-    body {
-      background-color: #0b141a;
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+    :root {
+      --sjs-teal: #006D75;
+      --sjs-teal-light: #008C99;
+      --sjs-teal-dark: #00454D;
+      --sjs-orange: #EA7200;
+      --sjs-orange-glow: rgba(234, 114, 0, 0.35);
+      --bg-deep: #080E13;
+      --bg-card: #111C24;
+      --bg-card-hover: #162531;
+      --bg-subtle: #192A36;
+      --border-color: #203544;
+      --border-accent: rgba(0, 140, 153, 0.4);
+      --text-main: #F4F7F9;
+      --text-muted: #8EA1B0;
+      --text-dim: #5B6F7E;
+      --win-color: #10B981;
+      --loss-color: #EF4444;
+      --ot-color: #F59E0B;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --shadow-glow: 0 0 25px rgba(0, 109, 117, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
     }
-    .card {
-      background-color: #005a6c;
-      border: 3px solid #ea7200;
-      border-radius: 12px;
-      padding: 30px;
-      width: 340px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-    h1 {
-      font-size: 22px;
-      margin: 0 0 15px 0;
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-transform: uppercase;
+      padding: 24px 16px 60px;
+      -webkit-font-smoothing: antialiased;
     }
-    .date-badge {
-      background-color: #000;
-      color: #ea7200;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 20px;
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
-    .score-display {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-    .miles-box {
-      background-color: #004554;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .miles-number {
-      font-size: 56px;
-      font-weight: bold;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-    .miles-label {
-      font-size: 12px;
-      letter-spacing: 1px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    .stats-box {
-      background-color: #004554;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: left;
-    }
-    .stat-line {
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #092027 0%, var(--bg-card) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
       display: flex;
       justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
     }
-    .stat-line:last-child {
-      border-bottom: none;
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(0, 109, 117, 0.4) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .stat-value {
-      font-weight: bold;
-      color: #ea7200;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-    .error-msg {
-      background-color: #111;
-      color: #ff8a8a;
-      padding: 10px;
-      border-radius: 5px;
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .brand-title h1 {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #FFFFFF 0%, #BFEAF0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .season-badge {
+      background: rgba(234, 114, 0, 0.15);
+      color: var(--sjs-orange);
+      border: 1px solid rgba(234, 114, 0, 0.3);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-secondary {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
       font-size: 12px;
-      margin-top: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--border-color);
+      border-color: var(--sjs-teal-light);
+    }
+
+    /* Navigation Tabs */
+    .tabs-nav {
+      display: flex;
+      gap: 8px;
+      background: var(--bg-card);
+      padding: 6px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      flex: 1;
+      min-width: 130px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tab-btn.active {
+      background: var(--sjs-teal);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 109, 117, 0.35);
+    }
+
+    /* Tab Contents */
+    .tab-pane {
+      display: none;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .tab-pane.active {
+      display: flex;
+    }
+
+    /* Season Stats Strip */
+    .season-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .kpi-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .kpi-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .kpi-value {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-main);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kpi-value.highlight {
+      color: var(--sjs-orange);
+    }
+
+    .kpi-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    /* Hero / Workout Card */
+    .hero-card {
+      background: linear-gradient(145deg, #11202a 0%, var(--bg-card) 100%);
+      border: 2px solid var(--sjs-teal);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--sjs-teal), var(--sjs-orange), var(--sjs-teal));
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      color: var(--sjs-orange);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .game-matchup-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .team-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .team-badge img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    }
+
+    .team-badge span {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .vs-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .score-badge {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .outcome-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .outcome-pill.win {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--win-color);
+      border: 1px solid var(--win-color);
+    }
+
+    .outcome-pill.loss {
+      background: rgba(239, 68, 68, 0.2);
+      color: var(--loss-color);
+      border: 1px solid var(--loss-color);
+    }
+
+    .outcome-pill.ot {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--ot-color);
+      border: 1px solid var(--ot-color);
+    }
+
+    /* Miles Big Display */
+    .miles-hero {
+      background: radial-gradient(circle at center, rgba(0, 109, 117, 0.35) 0%, rgba(17, 28, 36, 0.8) 75%);
+      border: 1px solid rgba(0, 140, 153, 0.3);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      margin: 20px 0 28px;
+    }
+
+    .miles-val-large {
+      font-size: 76px;
+      font-weight: 900;
+      line-height: 1;
+      color: #FFFFFF;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 4px 20px rgba(0, 109, 117, 0.5);
+    }
+
+    .miles-unit-label {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--sjs-orange);
+      margin-top: 8px;
+    }
+
+    /* Math Breakdown Grid */
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .breakdown-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .breakdown-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    .breakdown-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .breakdown-calc {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .breakdown-subtext {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .breakdown-miles {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sjs-orange);
+      margin-top: 2px;
+    }
+
+    /* Rest Day State */
+    .rest-hero {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .rest-icon {
+      font-size: 48px;
+    }
+
+    .rest-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .rest-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.5;
+    }
+
+    .next-game-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 16px 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .next-game-info {
       text-align: left;
+    }
+
+    .next-game-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--sjs-orange);
+    }
+
+    .next-game-match {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFF;
+    }
+
+    /* Goal Scorers Pill list */
+    .scorers-wrap {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .scorer-pill {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Calendar View */
+    .calendar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .cal-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cal-nav-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .cal-header-day {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      padding: 8px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cal-cell {
+      min-height: 95px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.15s ease;
+    }
+
+    .cal-cell.empty {
+      background: transparent;
+      border-color: transparent;
+      pointer-events: none;
+    }
+
+    .cal-cell.today {
+      border-color: var(--sjs-teal-light);
+      box-shadow: inset 0 0 0 1px var(--sjs-teal-light);
+    }
+
+    .cal-cell.has-game {
+      cursor: pointer;
+      background: #142431;
+    }
+
+    .cal-cell.has-game:hover {
+      border-color: var(--sjs-orange);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .cal-cell-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .cal-date-num {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .cal-cell.today .cal-date-num {
+      color: var(--sjs-orange);
+      font-weight: 800;
+    }
+
+    .cal-game-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: auto;
+    }
+
+    .cal-game-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cal-opp-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .cal-opp-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cal-result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cal-res-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+
+    .cal-res-badge.W {
+      background: rgba(16, 185, 129, 0.25);
+      color: var(--win-color);
+    }
+
+    .cal-res-badge.L {
+      background: rgba(239, 68, 68, 0.25);
+      color: var(--loss-color);
+    }
+
+    .cal-miles-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sjs-orange);
+      background: rgba(234, 114, 0, 0.12);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .cal-upcoming-badge {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Results / Schedule Table View */
+    .schedule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      background: var(--sjs-teal);
+      border-color: var(--sjs-teal-light);
+      color: #FFF;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table.games-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    table.games-table th {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    table.games-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+      vertical-align: middle;
+    }
+
+    table.games-table tr.clickable {
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    table.games-table tr.clickable:hover {
+      background-color: var(--bg-card-hover);
+    }
+
+    .opp-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .opp-cell img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .opp-name-text {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .match-type {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .result-pill-sm {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .result-pill-sm.win {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--win-color);
+    }
+
+    .result-pill-sm.loss {
+      background: rgba(239, 68, 68, 0.2);
+      color: var(--loss-color);
+    }
+
+    .miles-pill-table {
+      display: inline-block;
+      font-weight: 800;
+      color: var(--sjs-orange);
+      background: rgba(234, 114, 0, 0.12);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Rules / Math Card */
+    .rules-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .rules-card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .rules-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .rule-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .rule-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .rule-miles {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--sjs-orange);
+    }
+
+    .rule-box p {
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+
+    /* Modal / Popup */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      animation: modalFadeIn 0.2s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #092027 0%, var(--bg-card) 100%);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 20px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close-btn:hover {
+      color: #FFF;
+    }
+
+    .modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-equation-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .modal-equation-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .modal-equation-formula {
+      font-family: monospace;
+      font-size: 14px;
+      color: #FFFFFF;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .modal-miles-result {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--sjs-orange);
+      margin-top: 8px;
+    }
+
+    /* Status Banner / Loading / Error */
+    .status-alert {
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .status-alert.error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid var(--loss-color);
+      color: #FCA5A5;
+    }
+
+    .status-alert.loading {
+      background: rgba(0, 109, 117, 0.2);
+      border: 1px solid var(--sjs-teal);
+      color: #BFEAF0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .breakdown-grid {
+        grid-template-columns: 1fr;
+      }
+      .cal-grid {
+        gap: 4px;
+      }
+      .cal-cell {
+        min-height: 80px;
+        padding: 4px;
+      }
+      .cal-opp-logo {
+        width: 16px;
+        height: 16px;
+      }
+      .miles-val-large {
+        font-size: 58px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🦈 SHARKS RUN<br>CHALLENGE</h1>
-    
-    <div class="date-badge" id="date-label">Checking date...</div>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <img class="brand-logo" src="https://assets.nhle.com/logos/nhl/svg/SJS_light.svg" alt="San Jose Sharks Logo">
+        <div class="brand-title">
+          <h1>🦈 Sharks Run Challenge</h1>
+          <div class="brand-subtitle">
+            <span class="season-badge">2026-27 SEASON</span>
+            <span>Based on San Jose Sharks Game Results</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-secondary" id="refresh-btn" onclick="loadWorkoutData(true)">
+          <span id="refresh-icon">↻</span> Refresh
+        </button>
+      </div>
+    </header>
 
-    <div id="score-container" class="score-display" style="display: none;"></div>
+    <!-- Navigation Tabs -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('today-tab', this)">
+        🏃 Today's Workout
+      </button>
+      <button class="tab-btn" onclick="switchTab('calendar-tab', this)">
+        📅 Calendar
+      </button>
+      <button class="tab-btn" onclick="switchTab('schedule-tab', this)">
+        📋 Results & Schedule
+      </button>
+      <button class="tab-btn" onclick="switchTab('rules-tab', this)">
+        🧮 Challenge Rules
+      </button>
+    </nav>
 
-    <div class="miles-box">
-      <div class="miles-number" id="miles-val">0.00</div>
-      <div class="miles-label" id="sub-label">AWAITING SYNC</div>
+    <!-- Status / Error Banner -->
+    <div id="status-container" style="display: none;"></div>
+
+    <!-- TAB 1: Today's Workout -->
+    <div id="today-tab" class="tab-pane active">
+      <!-- Season KPI Summary Strip -->
+      <div class="season-stats-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">🏃 Season Miles</div>
+          <div class="kpi-value highlight" id="kpi-season-miles">0.00</div>
+          <div class="kpi-sub" id="kpi-avg-miles">Avg: 0.00 mi/game</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">🏒 Sharks Record</div>
+          <div class="kpi-value" id="kpi-record">0-0-0</div>
+          <div class="kpi-sub" id="kpi-games-played">0 games played</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">🛡️ Opp Failed PPs</div>
+          <div class="kpi-value" id="kpi-empty-pps">0</div>
+          <div class="kpi-sub">Penalty kills defended</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">🎩 Hat Tricks</div>
+          <div class="kpi-value" id="kpi-hat-tricks">0</div>
+          <div class="kpi-sub">+2.00 mi bonus each</div>
+        </div>
+      </div>
+
+      <!-- Hero Workout Card -->
+      <div class="hero-card" id="hero-workout-card">
+        <div class="status-pill" id="hero-date-badge">Checking game schedule...</div>
+
+        <!-- Played yesterday view -->
+        <div id="hero-played-view" style="display: none;">
+          <div class="game-matchup-banner">
+            <div class="team-badge">
+              <img id="hero-sjs-logo" src="https://assets.nhle.com/logos/nhl/svg/SJS_light.svg" alt="SJS">
+              <span>SJS</span>
+            </div>
+            <div class="vs-indicator">
+              <div class="score-badge" id="hero-score-badge">0 - 0</div>
+              <div class="outcome-pill" id="hero-outcome-pill">FINAL</div>
+            </div>
+            <div class="team-badge">
+              <img id="hero-opp-logo" src="" alt="OPP">
+              <span id="hero-opp-abbrev">OPP</span>
+            </div>
+          </div>
+
+          <div class="miles-hero">
+            <div class="miles-val-large" id="hero-miles-val">0.00</div>
+            <div class="miles-unit-label">Miles To Run Today</div>
+          </div>
+
+          <!-- Formula Breakdown -->
+          <div class="breakdown-grid">
+            <div class="breakdown-card">
+              <div class="breakdown-title">🏒 Goals Scored</div>
+              <div class="breakdown-calc"><span id="hero-goals-count">0</span> × 1.0 mi</div>
+              <div class="breakdown-subtext">1 mile per goal</div>
+              <div class="breakdown-miles" id="hero-goals-miles">+0.00 mi</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-title">🛡️ Opp Failed PPs</div>
+              <div class="breakdown-calc"><span id="hero-emptypp-count">0</span> × 0.25 mi</div>
+              <div class="breakdown-subtext" id="hero-opp-pp-summary">Opp PP: 0/0</div>
+              <div class="breakdown-miles" id="hero-emptypp-miles">+0.00 mi</div>
+            </div>
+            <div class="breakdown-card">
+              <div class="breakdown-title">🎩 Hat Tricks</div>
+              <div class="breakdown-calc"><span id="hero-hats-count">0</span> × 2.0 mi</div>
+              <div class="breakdown-subtext" id="hero-hat-players-text">3+ goals by a player</div>
+              <div class="breakdown-miles" id="hero-hats-miles">+0.00 mi</div>
+            </div>
+          </div>
+
+          <!-- Goal Scorers -->
+          <div class="scorers-wrap" id="hero-scorers-wrap" style="display: none;"></div>
+        </div>
+
+        <!-- Rest Day View -->
+        <div id="hero-rest-view" class="rest-hero" style="display: none;">
+          <div class="rest-icon">🛌</div>
+          <div class="rest-title">Rest Day!</div>
+          <div class="rest-desc" id="rest-desc-text">
+            No Sharks game yesterday. Enjoy your recovery, or log an optional easy shakeout run!
+          </div>
+
+          <div id="next-game-container" class="next-game-card" style="display: none;">
+            <img id="next-game-logo" src="" alt="Next Opponent" style="width: 44px; height: 44px; object-fit: contain;">
+            <div class="next-game-info">
+              <div class="next-game-label">Next Scheduled Game</div>
+              <div class="next-game-match" id="next-game-title">vs UTA</div>
+              <div style="font-size: 12px; color: var(--text-muted);" id="next-game-date">Nov 14</div>
+            </div>
+          </div>
+
+          <button class="btn-secondary" style="margin-top: 10px;" id="view-latest-btn" onclick="showLatestGameModal()">
+            🔍 View Most Recent Game Results
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="stats-box" id="stats-box">
-      <div class="stat-line">
-        <span>Goals (1 mi each)</span>
-        <span class="stat-value" id="goals-val">0</span>
-      </div>
-      <div class="stat-line">
-        <span>Power Play Goals (0.25 mi)</span>
-        <span class="stat-value" id="pp-val">0</span>
-      </div>
-      <div class="stat-line">
-        <span>Hat Tricks (+2 mi)</span>
-        <span class="stat-value" id="hats-val">0</span>
+    <!-- TAB 2: Calendar -->
+    <div id="calendar-tab" class="tab-pane">
+      <div class="calendar-card">
+        <div class="cal-controls">
+          <div class="cal-title">
+            <span id="cal-month-title">Month 2026</span>
+          </div>
+          <div class="cal-nav-group">
+            <button class="btn-secondary" onclick="prevMonth()">◀ Prev</button>
+            <button class="btn-secondary" onclick="jumpToCurrentMonth()">Current</button>
+            <button class="btn-secondary" onclick="nextMonth()">Next ▶</button>
+          </div>
+        </div>
+
+        <div class="cal-grid" id="cal-grid">
+          <!-- Calendar populated by JS -->
+        </div>
       </div>
     </div>
 
-    <div id="status-info" class="error-msg" style="display: none;"></div>
+    <!-- TAB 3: Results & Schedule -->
+    <div id="schedule-tab" class="tab-pane">
+      <div class="schedule-card">
+        <div class="filter-bar">
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterSchedule('all', this)">All Games</button>
+            <button class="filter-btn" onclick="filterSchedule('completed', this)">Results (Completed)</button>
+            <button class="filter-btn" onclick="filterSchedule('upcoming', this)">Upcoming</button>
+          </div>
+          <div style="font-size: 13px; color: var(--text-muted);" id="table-count-label">Showing all games</div>
+        </div>
+
+        <div class="table-container">
+          <table class="games-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Matchup</th>
+                <th>Result</th>
+                <th>Goals</th>
+                <th>Opp PP Defended</th>
+                <th>Hat Tricks</th>
+                <th>Miles To Run</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="games-table-body">
+              <!-- Table populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: Rules -->
+    <div id="rules-tab" class="tab-pane">
+      <div class="rules-card">
+        <h2>🏃 Sharks Running Challenge Rules</h2>
+        <p>
+          Turn every San Jose Sharks hockey game into your next running target. The day after every game, lace up your sneakers and run the exact distance calculated by the Sharks' on-ice performance!
+        </p>
+
+        <div class="rules-grid">
+          <div class="rule-box">
+            <div class="rule-header">
+              <span>🏒 Sharks Goals</span>
+            </div>
+            <div class="rule-miles">+1.0 Mile</div>
+            <p>Every goal scored by the Sharks in regulation or overtime adds 1 full mile to your workout.</p>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-header">
+              <span>🛡️ Penalty Kill Defense</span>
+            </div>
+            <div class="rule-miles">+0.25 Miles</div>
+            <p>Each time the opponent has a power play opportunity and fails to score, you run a quarter mile (0.25 mi).</p>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-header">
+              <span>🎩 Hat Trick Bonus</span>
+            </div>
+            <div class="rule-miles">+2.0 Miles</div>
+            <p>Whenever a Sharks player nets 3 or more goals in a single game, earn a +2.0 mile bonus for each hat trick!</p>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-header">
+              <span>🛌 Rest Days</span>
+            </div>
+            <div class="rule-miles">0.0 Miles</div>
+            <p>No Sharks game yesterday? It's a rest and recovery day. Rest up for the next game!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>San Jose Sharks Running Tracker · Automated daily via GitHub Actions</div>
+      <div id="last-updated-text" style="margin-top: 4px;">Last sync: Loading...</div>
+    </footer>
   </div>
 
+  <!-- Game Details Modal -->
+  <div class="modal-overlay" id="game-modal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-game-date">Game Details</div>
+        <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" id="modal-game-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback script data for local file:// usage without web server -->
+  <script src="data.js"></script>
   <script>
-    async function loadWorkoutData() {
-      const dateEl = document.getElementById('date-label');
-      const scoreEl = document.getElementById('score-container');
-      const milesEl = document.getElementById('miles-val');
-      const subEl = document.getElementById('sub-label');
-      const statsBox = document.getElementById('stats-box');
-      const goalsEl = document.getElementById('goals-val');
-      const ppEl = document.getElementById('pp-val');
-      const hatsEl = document.getElementById('hats-val');
-      const statusInfo = document.getElementById('status-info');
+    let appData = null;
+    let calendarCurrentDate = new Date();
+    let currentFilter = 'all';
 
-      try {
-        const response = await fetch('data.json?cache=' + new Date().getTime());
-        if (!response.ok) throw new Error('Could not load data.json');
-        const data = await response.json();
-        
-        dateEl.innerText = data.date ? `Game Date: ${data.date}` : "Date Unknown";
+    // Switch between UI tabs
+    function switchTab(tabId, btnElement) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+      if (btnElement) btnElement.classList.add('active');
 
-        if (data.played === false) {
-          milesEl.innerText = "REST";
-          subEl.innerText = "NO GAME YESTERDAY";
-          statsBox.style.display = "none";
-          statusInfo.style.display = "none";
-          scoreEl.style.display = "none";
-        } else {
-          if (data.sharks_score !== undefined && data.opp_score !== undefined) {
-            scoreEl.innerText = `SJS ${data.sharks_score} - ${data.opp_score} ${data.opp_name || 'OPP'}`;
-            scoreEl.style.display = "block";
-          }
-
-          milesEl.innerText = parseFloat(data.total_miles).toFixed(2);
-          subEl.innerText = "MILES TO RUN TODAY";
-          statsBox.style.display = "block";
-          
-          goalsEl.innerText = data.goals !== undefined ? data.goals : 0;
-          ppEl.innerText = data.pp_goals !== undefined ? data.pp_goals : 0;
-          hatsEl.innerText = data.hat_tricks !== undefined ? data.hat_tricks : 0;
-          statusInfo.style.display = "none";
-        }
-      } catch (error) {
-        console.error("Failed to load workout data:", error);
-        
-        dateEl.innerText = "Data Not Available";
-        milesEl.innerText = "0.00";
-        subEl.innerText = "AWAITING SYNC";
-        
-        goalsEl.innerText = "0";
-        ppEl.innerText = "0";
-        hatsEl.innerText = "0";
-
-        statusInfo.style.display = "block";
-        statusInfo.innerHTML = "<strong>Data Error:</strong> Could not load <em>data.json</em>.<br>Ensure the automated script has run to generate the latest stats.";
+      if (tabId === 'calendar-tab' && appData) {
+        renderCalendar();
       }
     }
 
-    window.addEventListener('DOMContentLoaded', loadWorkoutData);
+    // Load data.json
+    async function loadWorkoutData(isRefresh = false) {
+      const refreshBtn = document.getElementById('refresh-btn');
+      const refreshIcon = document.getElementById('refresh-icon');
+      const statusContainer = document.getElementById('status-container');
+
+      if (refreshIcon) refreshIcon.style.animation = 'spin 1s linear infinite';
+
+      try {
+        if (window.location.protocol !== 'file:') {
+          const url = 'data.json?t=' + (isRefresh ? new Date().getTime() : Date.now());
+          const response = await fetch(url);
+          if (response.ok) {
+            appData = await response.json();
+          }
+        }
+      } catch (error) {
+        console.warn('Fetch failed, checking window.SHARKS_DATA:', error);
+      }
+
+      if (!appData && window.SHARKS_DATA) {
+        appData = window.SHARKS_DATA;
+      }
+
+      if (appData) {
+        statusContainer.style.display = 'none';
+
+        renderTodayTab();
+        renderSeasonKPIs();
+        renderCalendar();
+        renderScheduleTable();
+
+        if (appData.last_updated) {
+          const d = new Date(appData.last_updated);
+          document.getElementById('last-updated-text').innerText = `Last sync: ${d.toLocaleString()}`;
+        }
+      } else {
+        statusContainer.style.display = 'block';
+        statusContainer.innerHTML = `
+          <div class="status-alert error">
+            <span>⚠️</span>
+            <div><strong>Error loading workout data.</strong> Please verify data.json or data.js exists.</div>
+          </div>
+        `;
+      }
+
+      if (refreshIcon) refreshIcon.style.animation = '';
+    }
+
+    // Render Season KPIs
+    function renderSeasonKPIs() {
+      if (!appData || !appData.season_summary) return;
+      const s = appData.season_summary;
+      
+      document.getElementById('kpi-season-miles').innerText = `${parseFloat(s.total_miles || 0).toFixed(2)} mi`;
+      document.getElementById('kpi-avg-miles').innerText = `Avg: ${parseFloat(s.avg_miles_per_game || 0).toFixed(2)} mi/game`;
+      document.getElementById('kpi-record').innerText = s.record || `${s.wins || 0}-${s.losses || 0}-${s.ot_losses || 0}`;
+      document.getElementById('kpi-games-played').innerText = `${s.games_played || 0} games completed`;
+      document.getElementById('kpi-empty-pps').innerText = s.total_empty_pp || 0;
+      document.getElementById('kpi-hat-tricks').innerText = s.total_hat_tricks || 0;
+    }
+
+    // Render Today's Workout Tab
+    function renderTodayTab() {
+      const dateBadge = document.getElementById('hero-date-badge');
+      const playedView = document.getElementById('hero-played-view');
+      const restView = document.getElementById('hero-rest-view');
+
+      if (!appData) return;
+
+      const yesterdayGame = appData.yesterday_game;
+      const playedYesterday = appData.played === true || (yesterdayGame && (yesterdayGame.gameState === 'FINAL' || yesterdayGame.gameState === 'OFF'));
+
+      if (playedYesterday && yesterdayGame) {
+        // Game played yesterday
+        dateBadge.innerText = `Game Date: ${formatDate(yesterdayGame.date)}`;
+        playedView.style.display = 'block';
+        restView.style.display = 'none';
+
+        document.getElementById('hero-opp-logo').src = yesterdayGame.oppLogo || '';
+        document.getElementById('hero-opp-abbrev').innerText = yesterdayGame.oppAbbrev || 'OPP';
+        document.getElementById('hero-score-badge').innerText = `SJS ${yesterdayGame.sharksScore} - ${yesterdayGame.oppScore} ${yesterdayGame.oppAbbrev}`;
+
+        const outcomePill = document.getElementById('hero-outcome-pill');
+        const outcome = yesterdayGame.gameOutcome || 'REG';
+        const isWin = yesterdayGame.result === 'W';
+        outcomePill.innerText = isWin ? `WIN (${outcome})` : `LOSS (${outcome})`;
+        outcomePill.className = `outcome-pill ${isWin ? 'win' : (outcome === 'REG' ? 'loss' : 'ot')}`;
+
+        const miles = parseFloat(yesterdayGame.totalMiles || 0);
+        document.getElementById('hero-miles-val').innerText = miles.toFixed(2);
+
+        // Breakdown stats
+        const goals = yesterdayGame.goals || 0;
+        const emptyPP = yesterdayGame.oppEmptyPP || 0;
+        const oppPPSummary = yesterdayGame.oppPPSummary || `${yesterdayGame.oppPPGoals || 0}/${yesterdayGame.oppPPOpps || 0}`;
+        const hats = yesterdayGame.hatTricks || 0;
+
+        document.getElementById('hero-goals-count').innerText = goals;
+        document.getElementById('hero-goals-miles').innerText = `+${(goals * 1.0).toFixed(2)} mi`;
+
+        document.getElementById('hero-emptypp-count').innerText = emptyPP;
+        document.getElementById('hero-emptypp-miles').innerText = `+${(emptyPP * 0.25).toFixed(2)} mi`;
+        document.getElementById('hero-opp-pp-summary').innerText = `Opp PP: ${oppPPSummary} (${emptyPP} killed)`;
+
+        document.getElementById('hero-hats-count').innerText = hats;
+        document.getElementById('hero-hats-miles').innerText = `+${(hats * 2.0).toFixed(2)} mi`;
+
+        const hatPlayers = yesterdayGame.hatTrickPlayers && yesterdayGame.hatTrickPlayers.length > 0 
+          ? yesterdayGame.hatTrickPlayers.join(', ')
+          : 'None';
+        document.getElementById('hero-hat-players-text').innerText = hatPlayers;
+
+        // Goal scorers
+        const scorersWrap = document.getElementById('hero-scorers-wrap');
+        if (yesterdayGame.goalScorers && yesterdayGame.goalScorers.length > 0) {
+          scorersWrap.style.display = 'flex';
+          scorersWrap.innerHTML = '<span style="font-size: 12px; color: var(--text-muted); margin-right: 6px;">Goal Scorers:</span>' + 
+            yesterdayGame.goalScorers.map(g => `<span class="scorer-pill">🏒 ${g.name} (${g.time} P${g.period})</span>`).join('');
+        } else {
+          scorersWrap.style.display = 'none';
+        }
+      } else {
+        // Rest Day
+        dateBadge.innerText = `Today: ${formatDate(appData.today_date || new Date().toISOString().slice(0, 10))}`;
+        playedView.style.display = 'none';
+        restView.style.display = 'flex';
+
+        // Next Game Card
+        const nextGame = appData.next_game;
+        const nextGameContainer = document.getElementById('next-game-container');
+        if (nextGame) {
+          nextGameContainer.style.display = 'inline-flex';
+          document.getElementById('next-game-logo').src = nextGame.oppLogo || '';
+          document.getElementById('next-game-title').innerText = `${nextGame.isHome ? 'vs' : '@'} ${nextGame.oppName || nextGame.oppAbbrev}`;
+          document.getElementById('next-game-date').innerText = formatDate(nextGame.date);
+        } else {
+          nextGameContainer.style.display = 'none';
+        }
+      }
+    }
+
+    // Interactive Calendar
+    function renderCalendar() {
+      if (!appData || !appData.games) return;
+
+      const grid = document.getElementById('cal-grid');
+      grid.innerHTML = '';
+
+      const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      weekdays.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'cal-header-day';
+        el.innerText = d;
+        grid.appendChild(el);
+      });
+
+      const year = calendarCurrentDate.getFullYear();
+      const month = calendarCurrentDate.getMonth();
+
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      document.getElementById('cal-month-title').innerText = `${monthNames[month]} ${year}`;
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      // Empty lead days
+      for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.className = 'cal-cell empty';
+        grid.appendChild(emptyCell);
+      }
+
+      // Map games by date string
+      const gamesByDate = {};
+      appData.games.forEach(g => {
+        if (g.date) gamesByDate[g.date] = g;
+      });
+
+      const todayStr = (appData.today_date) || new Date().toISOString().slice(0, 10);
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const game = gamesByDate[dateStr];
+
+        const cell = document.createElement('div');
+        cell.className = 'cal-cell';
+        if (dateStr === todayStr) cell.classList.add('today');
+
+        let cellHTML = `
+          <div class="cal-cell-header">
+            <span class="cal-date-num">${day}</span>
+          </div>
+        `;
+
+        if (game) {
+          cell.classList.add('has-game');
+          cell.onclick = () => openGameModal(game);
+
+          const isFinal = game.gameState === 'FINAL' || game.gameState === 'OFF';
+          const matchupPrefix = game.isHome ? 'vs' : '@';
+
+          cellHTML += `
+            <div class="cal-game-content">
+              <div class="cal-game-header">
+                ${game.oppLogo ? `<img class="cal-opp-logo" src="${game.oppLogo}" alt="${game.oppAbbrev}">` : ''}
+                <span class="cal-opp-text">${matchupPrefix} ${game.oppAbbrev}</span>
+              </div>
+          `;
+
+          if (isFinal) {
+            const resClass = game.result === 'W' ? 'W' : 'L';
+            const miles = parseFloat(game.totalMiles || 0).toFixed(1);
+            cellHTML += `
+              <div class="cal-result-row">
+                <span class="cal-res-badge ${resClass}">${game.result} ${game.sharksScore}-${game.oppScore}</span>
+                <span class="cal-miles-badge">🏃 ${miles}m</span>
+              </div>
+            `;
+          } else {
+            cellHTML += `
+              <div class="cal-result-row">
+                <span class="cal-upcoming-badge">Upcoming</span>
+              </div>
+            `;
+          }
+
+          cellHTML += `</div>`;
+        }
+
+        cell.innerHTML = cellHTML;
+        grid.appendChild(cell);
+      }
+    }
+
+    function prevMonth() {
+      calendarCurrentDate.setMonth(calendarCurrentDate.getMonth() - 1);
+      renderCalendar();
+    }
+
+    function nextMonth() {
+      calendarCurrentDate.setMonth(calendarCurrentDate.getMonth() + 1);
+      renderCalendar();
+    }
+
+    function jumpToCurrentMonth() {
+      calendarCurrentDate = new Date();
+      renderCalendar();
+    }
+
+    // Results & Schedule Table
+    function renderScheduleTable() {
+      if (!appData || !appData.games) return;
+
+      const tbody = document.getElementById('games-table-body');
+      tbody.innerHTML = '';
+
+      let games = [...appData.games];
+
+      if (currentFilter === 'completed') {
+        games = games.filter(g => g.gameState === 'FINAL' || g.gameState === 'OFF');
+      } else if (currentFilter === 'upcoming') {
+        games = games.filter(g => g.gameState !== 'FINAL' && g.gameState !== 'OFF');
+      }
+
+      document.getElementById('table-count-label').innerText = `Showing ${games.length} games`;
+
+      games.forEach(g => {
+        const tr = document.createElement('tr');
+        const isFinal = g.gameState === 'FINAL' || g.gameState === 'OFF';
+        if (isFinal) {
+          tr.className = 'clickable';
+          tr.onclick = () => openGameModal(g);
+        }
+
+        const matchPrefix = g.isHome ? 'vs' : '@';
+        const resultHTML = isFinal 
+          ? `<span class="result-pill-sm ${g.result === 'W' ? 'win' : 'loss'}">${g.result} ${g.sharksScore}-${g.oppScore} (${g.gameOutcome || 'REG'})</span>`
+          : `<span style="color: var(--text-dim); font-size: 11px;">Upcoming</span>`;
+
+        const milesHTML = isFinal
+          ? `<span class="miles-pill-table">🏃 ${parseFloat(g.totalMiles || 0).toFixed(2)} mi</span>`
+          : `<span style="color: var(--text-dim);">—</span>`;
+
+        const goalsHTML = isFinal ? `<strong>${g.goals}</strong> (+${(g.goals * 1.0).toFixed(2)} mi)` : '—';
+        const oppPPHTML = isFinal ? `<strong>${g.oppEmptyPP || 0}</strong> killed (${g.oppPPSummary || '0/0'})` : '—';
+        const hatsHTML = isFinal ? (g.hatTricks > 0 ? `🔥 <strong>${g.hatTricks}</strong>` : '0') : '—';
+
+        tr.innerHTML = `
+          <td style="white-space: nowrap; font-weight: 600;">${g.date}</td>
+          <td>
+            <div class="opp-cell">
+              ${g.oppLogo ? `<img src="${g.oppLogo}" alt="${g.oppAbbrev}">` : ''}
+              <div>
+                <div class="opp-name-text">${matchPrefix} ${g.oppName || g.oppAbbrev}</div>
+                <div class="match-type">${g.isHome ? 'SAP Center · Home' : 'Away Game'}</div>
+              </div>
+            </div>
+          </td>
+          <td>${resultHTML}</td>
+          <td>${goalsHTML}</td>
+          <td>${oppPPHTML}</td>
+          <td>${hatsHTML}</td>
+          <td>${milesHTML}</td>
+          <td>
+            ${isFinal ? `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;">View</button>` : ''}
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterSchedule(filter, btn) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderScheduleTable();
+    }
+
+    // Modal Details Popup
+    function openGameModal(game) {
+      const modal = document.getElementById('game-modal');
+      const dateEl = document.getElementById('modal-game-date');
+      const bodyEl = document.getElementById('modal-game-body');
+
+      dateEl.innerText = `${formatDate(game.date)} · ${game.isHome ? 'vs' : '@'} ${game.oppName || game.oppAbbrev}`;
+
+      const isFinal = game.gameState === 'FINAL' || game.gameState === 'OFF';
+
+      if (!isFinal) {
+        bodyEl.innerHTML = `
+          <div style="text-align: center; padding: 20px;">
+            <img src="${game.oppLogo || ''}" style="width: 60px; height: 60px; margin-bottom: 12px;">
+            <h3>Upcoming Game</h3>
+            <p style="color: var(--text-muted); margin-top: 8px;">Scheduled: ${game.date}</p>
+          </div>
+        `;
+        modal.classList.add('open');
+        return;
+      }
+
+      const goals = game.goals || 0;
+      const emptyPP = game.oppEmptyPP || 0;
+      const hats = game.hatTricks || 0;
+      const goalsMiles = (goals * 1.0).toFixed(2);
+      const ppMiles = (emptyPP * 0.25).toFixed(2);
+      const hatsMiles = (hats * 2.0).toFixed(2);
+      const totalMiles = parseFloat(game.totalMiles || 0).toFixed(2);
+
+      let scorersHTML = '<p style="color: var(--text-muted); font-size: 13px;">No goals recorded.</p>';
+      if (game.goalScorers && game.goalScorers.length > 0) {
+        scorersHTML = game.goalScorers.map(s => `
+          <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px;">
+            <span>🏒 <strong>${s.name}</strong></span>
+            <span style="color: var(--text-muted);">Period ${s.period} · ${s.time}</span>
+          </div>
+        `).join('');
+      }
+
+      bodyEl.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: space-around; padding: 10px 0;">
+          <div style="text-align: center;">
+            <img src="${game.sharksLogo || 'https://assets.nhle.com/logos/nhl/svg/SJS_light.svg'}" style="width: 44px; height: 44px;">
+            <div style="font-weight: 700; margin-top: 4px;">SJS</div>
+            <div style="font-size: 24px; font-weight: 800;">${game.sharksScore}</div>
+          </div>
+          <div style="text-align: center;">
+            <span class="outcome-pill ${game.result === 'W' ? 'win' : 'loss'}">${game.result} (${game.gameOutcome || 'REG'})</span>
+          </div>
+          <div style="text-align: center;">
+            <img src="${game.oppLogo || ''}" style="width: 44px; height: 44px;">
+            <div style="font-weight: 700; margin-top: 4px;">${game.oppAbbrev}</div>
+            <div style="font-size: 24px; font-weight: 800;">${game.oppScore}</div>
+          </div>
+        </div>
+
+        <div class="modal-equation-box">
+          <div class="modal-equation-title">Calculation Math</div>
+          <div class="modal-equation-formula">
+            (${goals} Goals × 1.0) + (${emptyPP} Failed PPs × 0.25) + (${hats} Hats × 2.0)
+          </div>
+          <div class="modal-miles-result">${totalMiles} MILES</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Breakdown Details</div>
+          
+          <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
+            <span>🏒 Sharks Goals (${goals})</span>
+            <strong style="color: var(--sjs-orange);">+${goalsMiles} mi</strong>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
+            <span>🛡️ Opponent Empty Power Plays (${emptyPP}) <small style="color:var(--text-dim);">[PP: ${game.oppPPSummary || '0/0'}]</small></span>
+            <strong style="color: var(--sjs-orange);">+${ppMiles} mi</strong>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
+            <span>🎩 Sharks Hat Tricks (${hats})</span>
+            <strong style="color: var(--sjs-orange);">+${hatsMiles} mi</strong>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Goal Scorers</div>
+          <div style="background: var(--bg-subtle); border-radius: 8px; padding: 12px;">
+            ${scorersHTML}
+          </div>
+        </div>
+      `;
+
+      modal.classList.add('open');
+    }
+
+    function showLatestGameModal() {
+      if (appData && appData.latest_completed_game) {
+        openGameModal(appData.latest_completed_game);
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('game-modal').classList.remove('open');
+    }
+
+    function closeModalOnOverlay(e) {
+      if (e.target.id === 'game-modal') closeModal();
+    }
+
+    // Helper: format YYYY-MM-DD to friendly string
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const [y, m, d] = dateStr.split('-');
+      const date = new Date(y, m - 1, d);
+      return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      loadWorkoutData();
+    });
   </script>
 </body>
 </html>
