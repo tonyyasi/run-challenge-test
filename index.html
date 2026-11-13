@@ -1006,6 +1006,258 @@
       margin-top: 20px;
     }
 
+    /* Unit Toggle (MI / KM) */
+    .unit-toggle {
+      display: inline-flex;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .unit-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 0.15s ease;
+    }
+
+    .unit-btn.active {
+      background: var(--sjs-teal);
+      color: #FFFFFF;
+    }
+
+    /* Calendar Month Summary & Monster Run */
+    .cal-month-summary {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sjs-orange);
+      background: rgba(234, 114, 0, 0.12);
+      border: 1px solid rgba(234, 114, 0, 0.3);
+      padding: 4px 10px;
+      border-radius: 16px;
+    }
+
+    .cal-cell.monster-run {
+      border-color: rgba(234, 114, 0, 0.55);
+      background: linear-gradient(160deg, #1b2833 0%, #241d18 100%);
+    }
+
+    /* Analytics Tab */
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .chart-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .chart-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chart-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .stacked-bar {
+      height: 18px;
+      border-radius: 9px;
+      overflow: hidden;
+      display: flex;
+      background: var(--bg-subtle);
+      margin-bottom: 14px;
+    }
+
+    .stacked-seg {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    .legend-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      padding: 6px 10px;
+      background: var(--bg-subtle);
+      border-radius: 6px;
+    }
+
+    .legend-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .leaderboard-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .leaderboard-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .leaderboard-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rank-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+
+    .rank-badge.top-1 { background: rgba(234, 114, 0, 0.25); border-color: var(--sjs-orange); color: var(--sjs-orange); }
+    .rank-badge.top-2 { background: rgba(0, 140, 153, 0.25); border-color: var(--sjs-teal-light); color: #BFEAF0; }
+    .rank-badge.top-3 { background: rgba(16, 185, 129, 0.2); border-color: var(--win-color); color: var(--win-color); }
+
+    .monster-runs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .monster-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .monster-card:hover {
+      border-color: var(--sjs-orange);
+      transform: translateY(-2px);
+    }
+
+    .svg-chart-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    /* House Bonus Rule Toggles */
+    .bonus-rules-section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .bonus-toggle-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #2c3e50;
+      transition: .2s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .2s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--sjs-orange);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
     /* Responsive */
     @media (max-width: 640px) {
       .breakdown-grid {
@@ -1043,6 +1295,10 @@
         </div>
       </div>
       <div class="header-actions">
+        <div class="unit-toggle" role="group" aria-label="Distance Unit">
+          <button class="unit-btn active" id="unit-mi-btn" onclick="setUnit('mi')">MI</button>
+          <button class="unit-btn" id="unit-km-btn" onclick="setUnit('km')">KM</button>
+        </div>
         <button class="btn-secondary" id="refresh-btn" onclick="loadWorkoutData(true)">
           <span id="refresh-icon">↻</span> Refresh
         </button>
@@ -1060,6 +1316,9 @@
       <button class="tab-btn" onclick="switchTab('schedule-tab', this)">
         📋 Results & Schedule
       </button>
+      <button class="tab-btn" onclick="switchTab('analytics-tab', this)">
+        📊 Analytics
+      </button>
       <button class="tab-btn" onclick="switchTab('rules-tab', this)">
         🧮 Challenge Rules
       </button>
@@ -1073,7 +1332,7 @@
       <!-- Season KPI Summary Strip -->
       <div class="season-stats-grid">
         <div class="kpi-card">
-          <div class="kpi-label">🏃 Season Miles</div>
+          <div class="kpi-label" id="kpi-season-label">🏃 Season Miles</div>
           <div class="kpi-value highlight" id="kpi-season-miles">0.00</div>
           <div class="kpi-sub" id="kpi-avg-miles">Avg: 0.00 mi/game</div>
         </div>
@@ -1117,7 +1376,7 @@
 
           <div class="miles-hero">
             <div class="miles-val-large" id="hero-miles-val">0.00</div>
-            <div class="miles-unit-label">Miles To Run Today</div>
+            <div class="miles-unit-label" id="hero-miles-unit-label">Miles To Run Today</div>
           </div>
 
           <!-- Formula Breakdown -->
@@ -1161,6 +1420,9 @@
               <div class="next-game-match" id="next-game-title">vs UTA</div>
               <div style="font-size: 12px; color: var(--text-muted);" id="next-game-date">Nov 14</div>
             </div>
+            <button class="btn-secondary" id="next-game-ics-btn" onclick="downloadNextGameICS()" title="Download calendar reminder for the morning-after run">
+              📅 Remind Me
+            </button>
           </div>
 
           <button class="btn-secondary" style="margin-top: 10px;" id="view-latest-btn" onclick="showLatestGameModal()">
@@ -1176,6 +1438,7 @@
         <div class="cal-controls">
           <div class="cal-title">
             <span id="cal-month-title">Month 2026</span>
+            <span class="cal-month-summary" id="cal-month-summary">0.00 mi · 0 games</span>
           </div>
           <div class="cal-nav-group">
             <button class="btn-secondary" onclick="prevMonth()">◀ Prev</button>
@@ -1224,7 +1487,41 @@
       </div>
     </div>
 
-    <!-- TAB 4: Rules -->
+    <!-- TAB 4: Analytics -->
+    <div id="analytics-tab" class="tab-pane">
+      <!-- Cumulative Miles Chart -->
+      <div class="chart-card">
+        <h3>📈 Cumulative Season Distance</h3>
+        <div class="chart-subtitle" id="chart-cumulative-sub">Progression across completed games this season</div>
+        <div class="svg-chart-wrap" id="cumulative-chart-container"></div>
+      </div>
+
+      <!-- Top Monster Runs -->
+      <div class="chart-card">
+        <h3>🔥 Biggest Runs of the Season</h3>
+        <div class="chart-subtitle">Click any game to inspect the full mileage breakdown</div>
+        <div class="monster-runs-grid" id="monster-runs-container"></div>
+      </div>
+
+      <div class="analytics-grid">
+        <!-- Source Breakdown -->
+        <div class="chart-card">
+          <h3>🥧 Distance Source Breakdown</h3>
+          <div class="chart-subtitle">Where your running distance comes from</div>
+          <div class="stacked-bar" id="source-stacked-bar"></div>
+          <div class="legend-list" id="source-legend-list"></div>
+        </div>
+
+        <!-- Player Leaderboard -->
+        <div class="chart-card">
+          <h3>🏆 Who Made Me Run the Most?</h3>
+          <div class="chart-subtitle">Sharks players ranked by distance generated (Goals + Hat Tricks)</div>
+          <div class="leaderboard-list" id="player-leaderboard-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: Rules -->
     <div id="rules-tab" class="tab-pane">
       <div class="rules-card">
         <h2>🏃 Sharks Running Challenge Rules</h2>
@@ -1265,6 +1562,44 @@
             <p>No Sharks game yesterday? It's a rest and recovery day. Rest up for the next game!</p>
           </div>
         </div>
+
+        <div class="bonus-rules-section">
+          <h3 style="font-size: 18px; margin-bottom: 6px; color: #FFF;">⚡ Optional Bonus Challenges (Live Preview)</h3>
+          <p style="margin-bottom: 16px;">Want an extra push? Toggle any house rule below to immediately recalculate all distances across your dashboard, calendar, and analytics (saved in this browser).</p>
+
+          <div class="bonus-toggle-row">
+            <div>
+              <div style="font-weight: 700; font-size: 14px;">🧱 Shutout Bonus (+1.0 mi)</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Add 1.0 mile whenever the Sharks hold the opponent to 0 goals</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="bonus-shutout" onchange="toggleBonusRule('shutout', this.checked)">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="bonus-toggle-row">
+            <div>
+              <div style="font-weight: 700; font-size: 14px;">🏆 Victory Bonus (+0.5 mi)</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Add 0.5 miles every time the Sharks win a game</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="bonus-win" onchange="toggleBonusRule('win', this.checked)">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="bonus-toggle-row">
+            <div>
+              <div style="font-weight: 700; font-size: 14px;">⏱️ OT / Shootout Win Bonus (+0.5 mi)</div>
+              <div style="font-size: 12px; color: var(--text-muted);">Add 0.5 extra miles for an Overtime or Shootout victory</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="bonus-otwin" onchange="toggleBonusRule('otwin', this.checked)">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1295,6 +1630,84 @@
     let calendarCurrentDate = new Date();
     let currentFilter = 'all';
 
+    // Preferences (persisted in localStorage)
+    const KM_PER_MILE = 1.60934;
+    let currentUnit = localStorage.getItem('sharks_run_unit') || 'mi';
+    let bonusRules = { shutout: false, win: false, otwin: false };
+    try {
+      const savedBonuses = JSON.parse(localStorage.getItem('sharks_run_bonuses') || '{}');
+      bonusRules = { ...bonusRules, ...savedBonuses };
+    } catch (e) {}
+
+    function setUnit(unit) {
+      currentUnit = unit === 'km' ? 'km' : 'mi';
+      localStorage.setItem('sharks_run_unit', currentUnit);
+      document.getElementById('unit-mi-btn').classList.toggle('active', currentUnit === 'mi');
+      document.getElementById('unit-km-btn').classList.toggle('active', currentUnit === 'km');
+      renderAllViews();
+    }
+
+    function toggleBonusRule(rule, enabled) {
+      bonusRules[rule] = !!enabled;
+      localStorage.setItem('sharks_run_bonuses', JSON.stringify(bonusRules));
+      renderAllViews();
+    }
+
+    function syncPreferenceUI() {
+      document.getElementById('unit-mi-btn').classList.toggle('active', currentUnit === 'mi');
+      document.getElementById('unit-km-btn').classList.toggle('active', currentUnit === 'km');
+      const shutoutEl = document.getElementById('bonus-shutout');
+      const winEl = document.getElementById('bonus-win');
+      const otwinEl = document.getElementById('bonus-otwin');
+      if (shutoutEl) shutoutEl.checked = !!bonusRules.shutout;
+      if (winEl) winEl.checked = !!bonusRules.win;
+      if (otwinEl) otwinEl.checked = !!bonusRules.otwin;
+    }
+
+    function unitShort() {
+      return currentUnit === 'km' ? 'km' : 'mi';
+    }
+
+    function unitFull() {
+      return currentUnit === 'km' ? 'Kilometers' : 'Miles';
+    }
+
+    function toDisplayDist(miles) {
+      const val = parseFloat(miles || 0);
+      return currentUnit === 'km' ? val * KM_PER_MILE : val;
+    }
+
+    function formatDist(miles, decimals = 2) {
+      return toDisplayDist(miles).toFixed(decimals);
+    }
+
+    function getEffectiveGameStats(game) {
+      if (!game || (game.gameState !== 'FINAL' && game.gameState !== 'OFF')) {
+        return { baseMiles: 0, bonusMiles: 0, totalMiles: 0, bonuses: [] };
+      }
+      const baseMiles = parseFloat(game.totalMiles || 0);
+      let bonusMiles = 0;
+      const bonuses = [];
+      if (bonusRules.shutout && game.oppScore === 0) {
+        bonusMiles += 1.0;
+        bonuses.push({ label: 'Shutout Bonus', miles: 1.0 });
+      }
+      if (bonusRules.win && game.result === 'W') {
+        bonusMiles += 0.5;
+        bonuses.push({ label: 'Victory Bonus', miles: 0.5 });
+      }
+      if (bonusRules.otwin && game.result === 'W' && game.gameOutcome && game.gameOutcome !== 'REG') {
+        bonusMiles += 0.5;
+        bonuses.push({ label: `${game.gameOutcome} Win Bonus`, miles: 0.5 });
+      }
+      return {
+        baseMiles,
+        bonusMiles,
+        totalMiles: Math.round((baseMiles + bonusMiles) * 100) / 100,
+        bonuses
+      };
+    }
+
     // Switch between UI tabs
     function switchTab(tabId, btnElement) {
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
@@ -1304,14 +1717,21 @@
       if (target) target.classList.add('active');
       if (btnElement) btnElement.classList.add('active');
 
-      if (tabId === 'calendar-tab' && appData) {
-        renderCalendar();
-      }
+      if (tabId === 'calendar-tab' && appData) renderCalendar();
+      if (tabId === 'analytics-tab' && appData) renderAnalytics();
+    }
+
+    function renderAllViews() {
+      if (!appData) return;
+      renderTodayTab();
+      renderSeasonKPIs();
+      renderCalendar();
+      renderScheduleTable();
+      renderAnalytics();
     }
 
     // Load data.json
     async function loadWorkoutData(isRefresh = false) {
-      const refreshBtn = document.getElementById('refresh-btn');
       const refreshIcon = document.getElementById('refresh-icon');
       const statusContainer = document.getElementById('status-container');
 
@@ -1335,11 +1755,7 @@
 
       if (appData) {
         statusContainer.style.display = 'none';
-
-        renderTodayTab();
-        renderSeasonKPIs();
-        renderCalendar();
-        renderScheduleTable();
+        renderAllViews();
 
         if (appData.last_updated) {
           const d = new Date(appData.last_updated);
@@ -1362,11 +1778,16 @@
     function renderSeasonKPIs() {
       if (!appData || !appData.season_summary) return;
       const s = appData.season_summary;
-      
-      document.getElementById('kpi-season-miles').innerText = `${parseFloat(s.total_miles || 0).toFixed(2)} mi`;
-      document.getElementById('kpi-avg-miles').innerText = `Avg: ${parseFloat(s.avg_miles_per_game || 0).toFixed(2)} mi/game`;
+      const completedGames = (appData.games || []).filter(g => g.gameState === 'FINAL' || g.gameState === 'OFF');
+      const totalEffectiveMiles = completedGames.reduce((sum, g) => sum + getEffectiveGameStats(g).totalMiles, 0);
+      const gamesCount = completedGames.length || s.games_played || 0;
+      const avgMiles = gamesCount > 0 ? (totalEffectiveMiles / gamesCount) : 0;
+
+      document.getElementById('kpi-season-label').innerText = `🏃 Season ${unitFull()}`;
+      document.getElementById('kpi-season-miles').innerText = `${formatDist(totalEffectiveMiles)} ${unitShort()}`;
+      document.getElementById('kpi-avg-miles').innerText = `Avg: ${formatDist(avgMiles)} ${unitShort()}/game`;
       document.getElementById('kpi-record').innerText = s.record || `${s.wins || 0}-${s.losses || 0}-${s.ot_losses || 0}`;
-      document.getElementById('kpi-games-played').innerText = `${s.games_played || 0} games completed`;
+      document.getElementById('kpi-games-played').innerText = `${gamesCount} games completed`;
       document.getElementById('kpi-empty-pps').innerText = s.total_empty_pp || 0;
       document.getElementById('kpi-hat-tricks').innerText = s.total_hat_tricks || 0;
     }
@@ -1383,7 +1804,6 @@
       const playedYesterday = appData.played === true || (yesterdayGame && (yesterdayGame.gameState === 'FINAL' || yesterdayGame.gameState === 'OFF'));
 
       if (playedYesterday && yesterdayGame) {
-        // Game played yesterday
         dateBadge.innerText = `Game Date: ${formatDate(yesterdayGame.date)}`;
         playedView.style.display = 'block';
         restView.style.display = 'none';
@@ -1398,31 +1818,30 @@
         outcomePill.innerText = isWin ? `WIN (${outcome})` : `LOSS (${outcome})`;
         outcomePill.className = `outcome-pill ${isWin ? 'win' : (outcome === 'REG' ? 'loss' : 'ot')}`;
 
-        const miles = parseFloat(yesterdayGame.totalMiles || 0);
-        document.getElementById('hero-miles-val').innerText = miles.toFixed(2);
+        const eff = getEffectiveGameStats(yesterdayGame);
+        document.getElementById('hero-miles-val').innerText = formatDist(eff.totalMiles);
+        document.getElementById('hero-miles-unit-label').innerText = `${unitFull()} To Run Today`;
 
-        // Breakdown stats
         const goals = yesterdayGame.goals || 0;
         const emptyPP = yesterdayGame.oppEmptyPP || 0;
         const oppPPSummary = yesterdayGame.oppPPSummary || `${yesterdayGame.oppPPGoals || 0}/${yesterdayGame.oppPPOpps || 0}`;
         const hats = yesterdayGame.hatTricks || 0;
 
         document.getElementById('hero-goals-count').innerText = goals;
-        document.getElementById('hero-goals-miles').innerText = `+${(goals * 1.0).toFixed(2)} mi`;
+        document.getElementById('hero-goals-miles').innerText = `+${formatDist(goals * 1.0)} ${unitShort()}`;
 
         document.getElementById('hero-emptypp-count').innerText = emptyPP;
-        document.getElementById('hero-emptypp-miles').innerText = `+${(emptyPP * 0.25).toFixed(2)} mi`;
+        document.getElementById('hero-emptypp-miles').innerText = `+${formatDist(emptyPP * 0.25)} ${unitShort()}`;
         document.getElementById('hero-opp-pp-summary').innerText = `Opp PP: ${oppPPSummary} (${emptyPP} killed)`;
 
         document.getElementById('hero-hats-count').innerText = hats;
-        document.getElementById('hero-hats-miles').innerText = `+${(hats * 2.0).toFixed(2)} mi`;
+        document.getElementById('hero-hats-miles').innerText = `+${formatDist(hats * 2.0)} ${unitShort()}`;
 
         const hatPlayers = yesterdayGame.hatTrickPlayers && yesterdayGame.hatTrickPlayers.length > 0 
           ? yesterdayGame.hatTrickPlayers.join(', ')
           : 'None';
         document.getElementById('hero-hat-players-text').innerText = hatPlayers;
 
-        // Goal scorers
         const scorersWrap = document.getElementById('hero-scorers-wrap');
         if (yesterdayGame.goalScorers && yesterdayGame.goalScorers.length > 0) {
           scorersWrap.style.display = 'flex';
@@ -1432,12 +1851,10 @@
           scorersWrap.style.display = 'none';
         }
       } else {
-        // Rest Day
         dateBadge.innerText = `Today: ${formatDate(appData.today_date || new Date().toISOString().slice(0, 10))}`;
         playedView.style.display = 'none';
         restView.style.display = 'flex';
 
-        // Next Game Card
         const nextGame = appData.next_game;
         const nextGameContainer = document.getElementById('next-game-container');
         if (nextGame) {
@@ -1478,20 +1895,20 @@
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-      // Empty lead days
       for (let i = 0; i < firstDay; i++) {
         const emptyCell = document.createElement('div');
         emptyCell.className = 'cal-cell empty';
         grid.appendChild(emptyCell);
       }
 
-      // Map games by date string
       const gamesByDate = {};
       appData.games.forEach(g => {
         if (g.date) gamesByDate[g.date] = g;
       });
 
       const todayStr = (appData.today_date) || new Date().toISOString().slice(0, 10);
+      let monthMiles = 0;
+      let monthCompletedGames = 0;
 
       for (let day = 1; day <= daysInMonth; day++) {
         const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -1513,6 +1930,13 @@
 
           const isFinal = game.gameState === 'FINAL' || game.gameState === 'OFF';
           const matchupPrefix = game.isHome ? 'vs' : '@';
+          const eff = getEffectiveGameStats(game);
+
+          if (isFinal) {
+            monthMiles += eff.totalMiles;
+            monthCompletedGames++;
+            if (eff.totalMiles >= 6.0) cell.classList.add('monster-run');
+          }
 
           cellHTML += `
             <div class="cal-game-content">
@@ -1524,11 +1948,12 @@
 
           if (isFinal) {
             const resClass = game.result === 'W' ? 'W' : 'L';
-            const miles = parseFloat(game.totalMiles || 0).toFixed(1);
+            const distStr = formatDist(eff.totalMiles, 1);
+            const fireIcon = eff.totalMiles >= 6.0 ? '🔥' : '🏃';
             cellHTML += `
               <div class="cal-result-row">
                 <span class="cal-res-badge ${resClass}">${game.result} ${game.sharksScore}-${game.oppScore}</span>
-                <span class="cal-miles-badge">🏃 ${miles}m</span>
+                <span class="cal-miles-badge">${fireIcon} ${distStr}${unitShort()}</span>
               </div>
             `;
           } else {
@@ -1545,6 +1970,9 @@
         cell.innerHTML = cellHTML;
         grid.appendChild(cell);
       }
+
+      document.getElementById('cal-month-summary').innerText =
+        `${formatDist(monthMiles)} ${unitShort()} · ${monthCompletedGames} played`;
     }
 
     function prevMonth() {
@@ -1582,21 +2010,20 @@
       games.forEach(g => {
         const tr = document.createElement('tr');
         const isFinal = g.gameState === 'FINAL' || g.gameState === 'OFF';
-        if (isFinal) {
-          tr.className = 'clickable';
-          tr.onclick = () => openGameModal(g);
-        }
+        tr.className = 'clickable';
+        tr.onclick = () => openGameModal(g);
 
         const matchPrefix = g.isHome ? 'vs' : '@';
+        const eff = getEffectiveGameStats(g);
         const resultHTML = isFinal 
           ? `<span class="result-pill-sm ${g.result === 'W' ? 'win' : 'loss'}">${g.result} ${g.sharksScore}-${g.oppScore} (${g.gameOutcome || 'REG'})</span>`
           : `<span style="color: var(--text-dim); font-size: 11px;">Upcoming</span>`;
 
         const milesHTML = isFinal
-          ? `<span class="miles-pill-table">🏃 ${parseFloat(g.totalMiles || 0).toFixed(2)} mi</span>`
+          ? `<span class="miles-pill-table">🏃 ${formatDist(eff.totalMiles)} ${unitShort()}</span>`
           : `<span style="color: var(--text-dim);">—</span>`;
 
-        const goalsHTML = isFinal ? `<strong>${g.goals}</strong> (+${(g.goals * 1.0).toFixed(2)} mi)` : '—';
+        const goalsHTML = isFinal ? `<strong>${g.goals}</strong> (+${formatDist(g.goals * 1.0)} ${unitShort()})` : '—';
         const oppPPHTML = isFinal ? `<strong>${g.oppEmptyPP || 0}</strong> killed (${g.oppPPSummary || '0/0'})` : '—';
         const hatsHTML = isFinal ? (g.hatTricks > 0 ? `🔥 <strong>${g.hatTricks}</strong>` : '0') : '—';
 
@@ -1617,7 +2044,9 @@
           <td>${hatsHTML}</td>
           <td>${milesHTML}</td>
           <td>
-            ${isFinal ? `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;">View</button>` : ''}
+            ${isFinal
+              ? `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;">View</button>`
+              : `<button class="btn-secondary" style="padding: 4px 8px; font-size: 11px;" onclick="event.stopPropagation(); downloadGameICSById(${g.id})">📅 .ics</button>`}
           </td>
         `;
 
@@ -1630,6 +2059,267 @@
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       renderScheduleTable();
+    }
+
+    // Analytics Tab
+    function renderAnalytics() {
+      if (!appData || !appData.games) return;
+
+      const completed = appData.games.filter(g => g.gameState === 'FINAL' || g.gameState === 'OFF');
+      renderCumulativeChart(completed);
+      renderMonsterRuns(completed);
+      renderSourceBreakdown(completed);
+      renderPlayerLeaderboard(completed);
+    }
+
+    function renderCumulativeChart(completed) {
+      const container = document.getElementById('cumulative-chart-container');
+      const subEl = document.getElementById('chart-cumulative-sub');
+      if (!completed.length) {
+        container.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">No completed games yet.</p>';
+        return;
+      }
+
+      let running = 0;
+      const points = completed.map((g, idx) => {
+        const eff = getEffectiveGameStats(g);
+        running += eff.totalMiles;
+        return {
+          idx,
+          date: g.date,
+          opp: g.oppAbbrev,
+          gameMiles: eff.totalMiles,
+          cumMiles: running
+        };
+      });
+
+      const maxDisplay = toDisplayDist(running) || 1;
+      subEl.innerText = `Cumulative ${formatDist(running)} ${unitShort()} across ${completed.length} completed games`;
+
+      const width = 820;
+      const height = 220;
+      const padL = 48, padR = 20, padT = 20, padB = 34;
+      const plotW = width - padL - padR;
+      const plotH = height - padT - padB;
+
+      const xFor = (i) => padL + (points.length === 1 ? plotW / 2 : (i / (points.length - 1)) * plotW);
+      const yFor = (miles) => padT + plotH - (toDisplayDist(miles) / maxDisplay) * plotH;
+
+      const lineCoords = points.map((p, i) => `${xFor(i).toFixed(1)},${yFor(p.cumMiles).toFixed(1)}`);
+      const areaPath = `M ${xFor(0).toFixed(1)},${(padT + plotH).toFixed(1)} L ${lineCoords.join(' L ')} L ${xFor(points.length - 1).toFixed(1)},${(padT + plotH).toFixed(1)} Z`;
+      const linePath = `M ${lineCoords.join(' L ')}`;
+
+      const yTicks = [0, 0.25, 0.5, 0.75, 1].map(frac => {
+        const val = maxDisplay * frac;
+        const y = padT + plotH - frac * plotH;
+        return `
+          <line x1="${padL}" y1="${y}" x2="${width - padR}" y2="${y}" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3,3" />
+          <text x="${padL - 8}" y="${y + 4}" text-anchor="end" fill="#8EA1B0" font-size="10">${val.toFixed(0)}</text>
+        `;
+      }).join('');
+
+      const dots = points.map((p, i) => {
+        const cx = xFor(i).toFixed(1);
+        const cy = yFor(p.cumMiles).toFixed(1);
+        return `<circle cx="${cx}" cy="${cy}" r="3.5" fill="#EA7200" stroke="#080E13" stroke-width="1.5">
+          <title>${p.date} vs ${p.opp}: +${formatDist(p.gameMiles)} ${unitShort()} (Total: ${formatDist(p.cumMiles)} ${unitShort()})</title>
+        </circle>`;
+      }).join('');
+
+      const firstLabel = points[0].date.slice(5);
+      const midLabel = points[Math.floor(points.length / 2)].date.slice(5);
+      const lastLabel = points[points.length - 1].date.slice(5);
+
+      container.innerHTML = `
+        <svg viewBox="0 0 ${width} ${height}" style="width: 100%; min-width: 500px; height: auto; display: block;">
+          <defs>
+            <linearGradient id="cumAreaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#008C99" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#008C99" stop-opacity="0.02"/>
+            </linearGradient>
+          </defs>
+          ${yTicks}
+          <path d="${areaPath}" fill="url(#cumAreaGrad)" />
+          <path d="${linePath}" fill="none" stroke="#008C99" stroke-width="2.5" stroke-linejoin="round" />
+          ${dots}
+          <text x="${padL}" y="${height - 10}" fill="#8EA1B0" font-size="10">${firstLabel}</text>
+          <text x="${padL + plotW / 2}" y="${height - 10}" text-anchor="middle" fill="#8EA1B0" font-size="10">${midLabel}</text>
+          <text x="${width - padR}" y="${height - 10}" text-anchor="end" fill="#8EA1B0" font-size="10">${lastLabel}</text>
+        </svg>
+      `;
+    }
+
+    function renderMonsterRuns(completed) {
+      const container = document.getElementById('monster-runs-container');
+      const sorted = [...completed]
+        .map(g => ({ game: g, eff: getEffectiveGameStats(g) }))
+        .sort((a, b) => b.eff.totalMiles - a.eff.totalMiles)
+        .slice(0, 3);
+
+      if (!sorted.length) {
+        container.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">No completed games yet.</p>';
+        return;
+      }
+
+      container.innerHTML = sorted.map((item, idx) => {
+        const g = item.game;
+        return `
+          <div class="monster-card" onclick="openGameModalById(${g.id})">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span class="rank-badge top-${idx + 1}">#${idx + 1}</span>
+              ${g.oppLogo ? `<img src="${g.oppLogo}" alt="${g.oppAbbrev}" style="width: 30px; height: 30px; object-fit: contain;">` : ''}
+              <div>
+                <div style="font-weight: 700; font-size: 13px;">${g.isHome ? 'vs' : '@'} ${g.oppAbbrev} (${g.sharksScore}-${g.oppScore})</div>
+                <div style="font-size: 11px; color: var(--text-muted);">${formatDate(g.date)}</div>
+              </div>
+            </div>
+            <div style="font-weight: 900; font-size: 16px; color: var(--sjs-orange);">
+              ${formatDist(item.eff.totalMiles)} ${unitShort()}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderSourceBreakdown(completed) {
+      const bar = document.getElementById('source-stacked-bar');
+      const legend = document.getElementById('source-legend-list');
+
+      let goalMiles = 0, ppMiles = 0, hatMiles = 0, bonusMiles = 0;
+      completed.forEach(g => {
+        goalMiles += (g.goals || 0) * 1.0;
+        ppMiles += (g.oppEmptyPP || 0) * 0.25;
+        hatMiles += (g.hatTricks || 0) * 2.0;
+        bonusMiles += getEffectiveGameStats(g).bonusMiles;
+      });
+
+      const total = goalMiles + ppMiles + hatMiles + bonusMiles || 1;
+      const segments = [
+        { label: 'Sharks Goals (1.0 mi ea)', miles: goalMiles, color: '#008C99' },
+        { label: 'Opp Failed PPs (0.25 mi ea)', miles: ppMiles, color: '#EA7200' },
+        { label: 'Hat Tricks (2.0 mi ea)', miles: hatMiles, color: '#10B981' }
+      ];
+      if (bonusMiles > 0) {
+        segments.push({ label: 'House Bonus Rules', miles: bonusMiles, color: '#F59E0B' });
+      }
+
+      bar.innerHTML = segments.map(s => {
+        const pct = (s.miles / total) * 100;
+        return `<div class="stacked-seg" style="width: ${pct.toFixed(2)}%; background: ${s.color};" title="${s.label}: ${formatDist(s.miles)} ${unitShort()}"></div>`;
+      }).join('');
+
+      legend.innerHTML = segments.map(s => {
+        const pct = ((s.miles / total) * 100).toFixed(1);
+        return `
+          <div class="legend-item">
+            <div class="legend-left">
+              <span class="legend-dot" style="background: ${s.color};"></span>
+              <span>${s.label}</span>
+            </div>
+            <strong>${formatDist(s.miles)} ${unitShort()} (${pct}%)</strong>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderPlayerLeaderboard(completed) {
+      const list = document.getElementById('player-leaderboard-list');
+      const playerMap = {};
+
+      completed.forEach(g => {
+        const perGameCounts = {};
+        (g.goalScorers || []).forEach(s => {
+          const name = s.name || 'Unknown';
+          if (!playerMap[name]) playerMap[name] = { name, goals: 0, hatTricks: 0, miles: 0 };
+          playerMap[name].goals += 1;
+          playerMap[name].miles += 1.0;
+          perGameCounts[name] = (perGameCounts[name] || 0) + 1;
+        });
+        Object.keys(perGameCounts).forEach(name => {
+          if (perGameCounts[name] >= 3) {
+            playerMap[name].hatTricks += 1;
+            playerMap[name].miles += 2.0;
+          }
+        });
+      });
+
+      const ranked = Object.values(playerMap).sort((a, b) => b.miles - a.miles || b.goals - a.goals);
+      if (!ranked.length) {
+        list.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">No goal data recorded yet.</p>';
+        return;
+      }
+
+      list.innerHTML = ranked.map((p, idx) => {
+        const rankClass = idx < 3 ? `top-${idx + 1}` : '';
+        const hatBadge = p.hatTricks > 0 ? ` · 🎩 ${p.hatTricks}` : '';
+        return `
+          <div class="leaderboard-row">
+            <div class="leaderboard-left">
+              <span class="rank-badge ${rankClass}">${idx + 1}</span>
+              <div>
+                <div style="font-weight: 700;">${p.name}</div>
+                <div style="font-size: 11px; color: var(--text-muted);">${p.goals} goal${p.goals === 1 ? '' : 's'}${hatBadge}</div>
+              </div>
+            </div>
+            <strong style="color: var(--sjs-orange);">${formatDist(p.miles)} ${unitShort()}</strong>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ICS Calendar Reminder Export (Morning-after run reminder)
+    function downloadGameICS(game) {
+      if (!game || !game.date) return;
+      const [y, m, d] = game.date.split('-').map(Number);
+      // Morning after the game at 08:00 local time
+      const runDate = new Date(y, m - 1, d + 1, 8, 0, 0);
+      const runEnd = new Date(y, m - 1, d + 1, 9, 0, 0);
+
+      const pad = (n) => String(n).padStart(2, '0');
+      const fmtICS = (dt) =>
+        `${dt.getFullYear()}${pad(dt.getMonth() + 1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}00`;
+
+      const matchup = `${game.isHome ? 'vs' : '@'} ${game.oppName || game.oppAbbrev}`;
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Sharks Run Challenge//EN',
+        'BEGIN:VEVENT',
+        `UID:sharks-run-${game.id}@run-challenge`,
+        `DTSTAMP:${fmtICS(new Date())}`,
+        `DTSTART:${fmtICS(runDate)}`,
+        `DTEND:${fmtICS(runEnd)}`,
+        `SUMMARY:🦈 Sharks Run Challenge (${matchup})`,
+        `DESCRIPTION:Time to run the mileage from yesterday's San Jose Sharks game (${matchup} on ${game.date})!`,
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `sharks-run-${game.date}-${game.oppAbbrev}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadNextGameICS() {
+      if (appData && appData.next_game) downloadGameICS(appData.next_game);
+    }
+
+    function downloadGameICSById(id) {
+      if (!appData || !appData.games) return;
+      const game = appData.games.find(g => g.id === id);
+      if (game) downloadGameICS(game);
+    }
+
+    function openGameModalById(id) {
+      if (!appData || !appData.games) return;
+      const game = appData.games.find(g => g.id === id);
+      if (game) openGameModal(game);
     }
 
     // Modal Details Popup
@@ -1647,7 +2337,8 @@
           <div style="text-align: center; padding: 20px;">
             <img src="${game.oppLogo || ''}" style="width: 60px; height: 60px; margin-bottom: 12px;">
             <h3>Upcoming Game</h3>
-            <p style="color: var(--text-muted); margin-top: 8px;">Scheduled: ${game.date}</p>
+            <p style="color: var(--text-muted); margin: 8px 0 18px;">Scheduled: ${formatDate(game.date)}</p>
+            <button class="btn-secondary" onclick="downloadGameICSById(${game.id})">📅 Add Morning-After Run Reminder (.ics)</button>
           </div>
         `;
         modal.classList.add('open');
@@ -1657,10 +2348,7 @@
       const goals = game.goals || 0;
       const emptyPP = game.oppEmptyPP || 0;
       const hats = game.hatTricks || 0;
-      const goalsMiles = (goals * 1.0).toFixed(2);
-      const ppMiles = (emptyPP * 0.25).toFixed(2);
-      const hatsMiles = (hats * 2.0).toFixed(2);
-      const totalMiles = parseFloat(game.totalMiles || 0).toFixed(2);
+      const eff = getEffectiveGameStats(game);
 
       let scorersHTML = '<p style="color: var(--text-muted); font-size: 13px;">No goals recorded.</p>';
       if (game.goalScorers && game.goalScorers.length > 0) {
@@ -1671,6 +2359,13 @@
           </div>
         `).join('');
       }
+
+      const bonusRowsHTML = eff.bonuses.map(b => `
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
+          <span>⚡ ${b.label}</span>
+          <strong style="color: var(--sjs-orange);">+${formatDist(b.miles)} ${unitShort()}</strong>
+        </div>
+      `).join('');
 
       bodyEl.innerHTML = `
         <div style="display: flex; align-items: center; justify-content: space-around; padding: 10px 0;">
@@ -1692,9 +2387,9 @@
         <div class="modal-equation-box">
           <div class="modal-equation-title">Calculation Math</div>
           <div class="modal-equation-formula">
-            (${goals} Goals × 1.0) + (${emptyPP} Failed PPs × 0.25) + (${hats} Hats × 2.0)
+            (${goals} Goals × 1.0) + (${emptyPP} Failed PPs × 0.25) + (${hats} Hats × 2.0)${eff.bonusMiles > 0 ? ` + (${eff.bonusMiles.toFixed(2)} Bonus)` : ''}
           </div>
-          <div class="modal-miles-result">${totalMiles} MILES</div>
+          <div class="modal-miles-result">${formatDist(eff.totalMiles)} ${unitFull().toUpperCase()}</div>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -1702,18 +2397,20 @@
           
           <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
             <span>🏒 Sharks Goals (${goals})</span>
-            <strong style="color: var(--sjs-orange);">+${goalsMiles} mi</strong>
+            <strong style="color: var(--sjs-orange);">+${formatDist(goals * 1.0)} ${unitShort()}</strong>
           </div>
 
           <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
             <span>🛡️ Opponent Empty Power Plays (${emptyPP}) <small style="color:var(--text-dim);">[PP: ${game.oppPPSummary || '0/0'}]</small></span>
-            <strong style="color: var(--sjs-orange);">+${ppMiles} mi</strong>
+            <strong style="color: var(--sjs-orange);">+${formatDist(emptyPP * 0.25)} ${unitShort()}</strong>
           </div>
 
           <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
             <span>🎩 Sharks Hat Tricks (${hats})</span>
-            <strong style="color: var(--sjs-orange);">+${hatsMiles} mi</strong>
+            <strong style="color: var(--sjs-orange);">+${formatDist(hats * 2.0)} ${unitShort()}</strong>
           </div>
+
+          ${bonusRowsHTML}
         </div>
 
         <div>
@@ -1751,6 +2448,7 @@
 
     // Initialize
     window.addEventListener('DOMContentLoaded', () => {
+      syncPreferenceUI();
       loadWorkoutData();
     });
   </script>
