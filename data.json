@@ -1,2115 +1,2035 @@
-﻿{
-    "date":  "2026-11-12",
-    "played":  false,
-    "sharks_score":  0,
-    "opp_score":  0,
-    "opp_name":  "",
-    "goals":  0,
-    "pp_goals":  0,
-    "opp_empty_pp":  0,
-    "hat_tricks":  0,
-    "total_miles":  0,
-    "last_updated":  "2026-11-13T14:07:38.6238624",
-    "today_date":  "2026-11-13",
-    "yesterday_game":  null,
-    "latest_completed_game":  {
-                                  "id":  2026020298,
-                                  "date":  "2026-11-11",
-                                  "startTimeUTC":  "2026-11-12T03:00:00Z",
-                                  "isHome":  true,
-                                  "oppAbbrev":  "PIT",
-                                  "oppName":  "Penguins",
-                                  "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-                                  "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                                  "gameState":  "OFF",
-                                  "gameScheduleState":  "OK",
-                                  "sharksScore":  2,
-                                  "oppScore":  3,
-                                  "result":  "L",
-                                  "gameOutcome":  "SO",
-                                  "goals":  2,
-                                  "oppPPGoals":  1,
-                                  "oppPPOpps":  3,
-                                  "oppEmptyPP":  2,
-                                  "oppPPSummary":  "1/3",
-                                  "hatTricks":  0,
-                                  "hatTrickPlayers":  [
-
-                                                      ],
-                                  "goalScorers":  [
-                                                      {
-                                                          "name":  "M. Celebrini",
-                                                          "period":  3,
-                                                          "time":  "11:32",
-                                                          "strength":  "ev"
-                                                      },
-                                                      {
-                                                          "name":  "M. Marchment",
-                                                          "period":  3,
-                                                          "time":  "15:49",
-                                                          "strength":  "ev"
-                                                      }
-                                                  ],
-                                  "milesBreakdown":  {
-                                                         "goalsMiles":  2,
-                                                         "ppMiles":  0.5,
-                                                         "hatTrickMiles":  0,
-                                                         "totalMiles":  2.5
-                                                     },
-                                  "totalMiles":  2.5
-                              },
-    "next_game":  {
-                      "id":  2026020323,
-                      "date":  "2026-11-14",
-                      "startTimeUTC":  "2026-11-15T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "UTA",
-                      "oppName":  "Mammoth",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-    "season_summary":  {
-                           "total_miles":  88.75,
-                           "games_played":  25,
-                           "record":  "10-12-3",
-                           "wins":  10,
-                           "losses":  12,
-                           "ot_losses":  3,
-                           "total_goals":  70,
-                           "total_empty_pp":  67,
-                           "total_hat_tricks":  1,
-                           "avg_miles_per_game":  3.55
-                       },
-    "games":  [
-                  {
-                      "id":  2026010009,
-                      "date":  "2026-09-20",
-                      "startTimeUTC":  "2026-09-20T20:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FINAL",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  2,
-                      "oppScore":  6,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  2,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "1/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "E. Pohlkamp",
-                                              "period":  1,
-                                              "time":  "01:37",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "J. Huntington",
-                                              "period":  2,
-                                              "time":  "11:05",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  2,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  2.5
-                                         },
-                      "totalMiles":  2.5
-                  },
-                  {
-                      "id":  2026010032,
-                      "date":  "2026-09-22",
-                      "startTimeUTC":  "2026-09-23T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FINAL",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  2,
-                      "result":  "L",
-                      "gameOutcome":  "SO",
-                      "goals":  1,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  0,
-                      "oppEmptyPP":  0,
-                      "oppPPSummary":  "0/0",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  3,
-                                              "time":  "04:18",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1
-                                         },
-                      "totalMiles":  1
-                  },
-                  {
-                      "id":  2026010039,
-                      "date":  "2026-09-24",
-                      "startTimeUTC":  "2026-09-25T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FINAL",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  10,
-                      "oppScore":  0,
-                      "result":  "W",
-                      "gameOutcome":  "REG",
-                      "goals":  10,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  4,
-                      "oppEmptyPP":  4,
-                      "oppPPSummary":  "0/4",
-                      "hatTricks":  1,
-                      "hatTrickPlayers":  [
-                                              "I. Stenberg (3)"
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  1,
-                                              "time":  "03:55",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  1,
-                                              "time":  "05:29",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Chernyshov",
-                                              "period":  1,
-                                              "time":  "09:29",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  1,
-                                              "time":  "11:33",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Chernyshov",
-                                              "period":  1,
-                                              "time":  "15:45",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  2,
-                                              "time":  "03:04",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  2,
-                                              "time":  "12:57",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "B. Leason",
-                                              "period":  3,
-                                              "time":  "07:54",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  3,
-                                              "time":  "16:57",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "F. Bystedt",
-                                              "period":  3,
-                                              "time":  "17:23",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  10,
-                                             "ppMiles":  1,
-                                             "hatTrickMiles":  2,
-                                             "totalMiles":  13
-                                         },
-                      "totalMiles":  13
-                  },
-                  {
-                      "id":  2026010063,
-                      "date":  "2026-09-26",
-                      "startTimeUTC":  "2026-09-27T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FINAL",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  4,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "REG",
-                      "goals":  4,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  4,
-                      "oppPPSummary":  "1/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "D. Orlov",
-                                              "period":  1,
-                                              "time":  "19:20",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  2,
-                                              "time":  "06:45",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  3,
-                                              "time":  "09:47",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  3,
-                                              "time":  "14:54",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  4,
-                                             "ppMiles":  1,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  5
-                                         },
-                      "totalMiles":  5
-                  },
-                  {
-                      "id":  2026020016,
-                      "date":  "2026-10-01",
-                      "startTimeUTC":  "2026-10-02T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "FLA",
-                      "oppName":  "Panthers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  4,
-                      "oppScore":  3,
-                      "result":  "W",
-                      "gameOutcome":  "OT",
-                      "goals":  4,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  6,
-                      "oppEmptyPP":  5,
-                      "oppPPSummary":  "1/6",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  1,
-                                              "time":  "14:20",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  2,
-                                              "time":  "05:52",
-                                              "strength":  "sh"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  2,
-                                              "time":  "10:37",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "L. Cagnoni",
-                                              "period":  4,
-                                              "time":  "03:14",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  4,
-                                             "ppMiles":  1.25,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  5.25
-                                         },
-                      "totalMiles":  5.25
-                  },
-                  {
-                      "id":  2026020034,
-                      "date":  "2026-10-03",
-                      "startTimeUTC":  "2026-10-04T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "LAK",
-                      "oppName":  "Kings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  5,
-                      "oppScore":  4,
-                      "result":  "W",
-                      "gameOutcome":  "OT",
-                      "goals":  5,
-                      "oppPPGoals":  2,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  1,
-                      "oppPPSummary":  "2/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "T. Toffoli",
-                                              "period":  2,
-                                              "time":  "01:48",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "K. Sherwood",
-                                              "period":  2,
-                                              "time":  "09:52",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "N. Allan",
-                                              "period":  2,
-                                              "time":  "12:32",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Chernyshov",
-                                              "period":  3,
-                                              "time":  "04:08",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Chernyshov",
-                                              "period":  4,
-                                              "time":  "03:18",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  5,
-                                             "ppMiles":  0.25,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  5.25
-                                         },
-                      "totalMiles":  5.25
-                  },
-                  {
-                      "id":  2026020043,
-                      "date":  "2026-10-05",
-                      "startTimeUTC":  "2026-10-06T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "DAL",
-                      "oppName":  "Stars",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  0,
-                      "oppScore":  5,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  0,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  0,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  0.75
-                                         },
-                      "totalMiles":  0.75
-                  },
-                  {
-                      "id":  2026020063,
-                      "date":  "2026-10-08",
-                      "startTimeUTC":  "2026-10-09T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "STL",
-                      "oppName":  "Blues",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "OT",
-                      "goals":  3,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  2,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "0/2",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "T. Toffoli",
-                                              "period":  2,
-                                              "time":  "08:48",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "C. Graf",
-                                              "period":  3,
-                                              "time":  "06:05",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "D. Nurse",
-                                              "period":  4,
-                                              "time":  "01:03",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.5
-                                         },
-                      "totalMiles":  3.5
-                  },
-                  {
-                      "id":  2026020072,
-                      "date":  "2026-10-10",
-                      "startTimeUTC":  "2026-10-10T20:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "EDM",
-                      "oppName":  "Oilers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  3,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  1,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  2,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "0/2",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  3,
-                                              "time":  "11:19",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1.5
-                                         },
-                      "totalMiles":  1.5
-                  },
-                  {
-                      "id":  2026020105,
-                      "date":  "2026-10-13",
-                      "startTimeUTC":  "2026-10-14T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "BOS",
-                      "oppName":  "Bruins",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  6,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  3,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  2,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "0/2",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "J. Trouba",
-                                              "period":  1,
-                                              "time":  "15:29",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  2,
-                                              "time":  "05:48",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  3,
-                                              "time":  "05:04",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.5
-                                         },
-                      "totalMiles":  3.5
-                  },
-                  {
-                      "id":  2026020115,
-                      "date":  "2026-10-15",
-                      "startTimeUTC":  "2026-10-16T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "NSH",
-                      "oppName":  "Predators",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "SO",
-                      "goals":  3,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  4,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "1/4",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  1,
-                                              "time":  "05:30",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  3,
-                                              "time":  "04:28",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  5,
-                                              "time":  "00:00",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.75
-                                         },
-                      "totalMiles":  3.75
-                  },
-                  {
-                      "id":  2026020127,
-                      "date":  "2026-10-17",
-                      "startTimeUTC":  "2026-10-17T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "DET",
-                      "oppName":  "Red Wings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  4,
-                      "result":  "L",
-                      "gameOutcome":  "SO",
-                      "goals":  3,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  4,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "1/4",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "D. Orlov",
-                                              "period":  1,
-                                              "time":  "17:59",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  2,
-                                              "time":  "04:55",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  3,
-                                              "time":  "02:48",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.75
-                                         },
-                      "totalMiles":  3.75
-                  },
-                  {
-                      "id":  2026020139,
-                      "date":  "2026-10-19",
-                      "startTimeUTC":  "2026-10-19T23:30:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "TOR",
-                      "oppName":  "Maple Leafs",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  3,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  1,
-                      "oppPPGoals":  2,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "2/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  1,
-                                              "time":  "13:54",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1.75
-                                         },
-                      "totalMiles":  1.75
-                  },
-                  {
-                      "id":  2026020141,
-                      "date":  "2026-10-20",
-                      "startTimeUTC":  "2026-10-20T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "MTL",
-                      "oppName":  "Canadiens",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  4,
-                      "oppScore":  3,
-                      "result":  "W",
-                      "gameOutcome":  "OT",
-                      "goals":  4,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  2,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "0/2",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  1,
-                                              "time":  "13:49",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  3,
-                                              "time":  "05:36",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "T. Toffoli",
-                                              "period":  3,
-                                              "time":  "11:09",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  4,
-                                              "time":  "02:13",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  4,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  4.5
-                                         },
-                      "totalMiles":  4.5
-                  },
-                  {
-                      "id":  2026020156,
-                      "date":  "2026-10-22",
-                      "startTimeUTC":  "2026-10-22T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "OTT",
-                      "oppName":  "Senators",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  6,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "REG",
-                      "goals":  6,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "N. Allan",
-                                              "period":  1,
-                                              "time":  "11:04",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "T. Toffoli",
-                                              "period":  2,
-                                              "time":  "09:13",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "C. Graf",
-                                              "period":  2,
-                                              "time":  "12:00",
-                                              "strength":  "sh"
-                                          },
-                                          {
-                                              "name":  "J. Trouba",
-                                              "period":  2,
-                                              "time":  "13:18",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "Z. Ostapchuk",
-                                              "period":  3,
-                                              "time":  "16:31",
-                                              "strength":  "sh"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  3,
-                                              "time":  "19:43",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  6,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  6.75
-                                         },
-                      "totalMiles":  6.75
-                  },
-                  {
-                      "id":  2026020170,
-                      "date":  "2026-10-24",
-                      "startTimeUTC":  "2026-10-24T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "BOS",
-                      "oppName":  "Bruins",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  4,
-                      "oppScore":  6,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  4,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  4,
-                      "oppPPSummary":  "1/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  1,
-                                              "time":  "05:54",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "K. Sherwood",
-                                              "period":  2,
-                                              "time":  "13:34",
-                                              "strength":  "sh"
-                                          },
-                                          {
-                                              "name":  "D. Orlov",
-                                              "period":  3,
-                                              "time":  "04:03",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  3,
-                                              "time":  "12:27",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  4,
-                                             "ppMiles":  1,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  5
-                                         },
-                      "totalMiles":  5
-                  },
-                  {
-                      "id":  2026020198,
-                      "date":  "2026-10-27",
-                      "startTimeUTC":  "2026-10-28T02:30:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "BUF",
-                      "oppName":  "Sabres",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  0,
-                      "oppScore":  2,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  0,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  0,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  0.75
-                                         },
-                      "totalMiles":  0.75
-                  },
-                  {
-                      "id":  2026020213,
-                      "date":  "2026-10-29",
-                      "startTimeUTC":  "2026-10-30T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "VAN",
-                      "oppName":  "Canucks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "REG",
-                      "goals":  3,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  3,
-                                              "time":  "08:00",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  3,
-                                              "time":  "10:39",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  3,
-                                              "time":  "10:50",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.75
-                                         },
-                      "totalMiles":  3.75
-                  },
-                  {
-                      "id":  2026020222,
-                      "date":  "2026-10-31",
-                      "startTimeUTC":  "2026-10-31T20:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "OTT",
-                      "oppName":  "Senators",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  5,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  1,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  1,
-                                              "time":  "16:06",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1.75
-                                         },
-                      "totalMiles":  1.75
-                  },
-                  {
-                      "id":  2026020235,
-                      "date":  "2026-11-02",
-                      "startTimeUTC":  "2026-11-03T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CGY",
-                      "oppName":  "Flames",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  2,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  1,
-                      "oppPPGoals":  0,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "0/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "S. Dickinson",
-                                              "period":  3,
-                                              "time":  "11:57",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1.75
-                                         },
-                      "totalMiles":  1.75
-                  },
-                  {
-                      "id":  2026020249,
-                      "date":  "2026-11-04",
-                      "startTimeUTC":  "2026-11-05T03:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "LAK",
-                      "oppName":  "Kings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  2,
-                      "oppScore":  7,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  2,
-                      "oppPPGoals":  3,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "3/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  2,
-                                              "time":  "05:07",
-                                              "strength":  "pp"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  3,
-                                              "time":  "09:41",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  2,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  2.5
-                                         },
-                      "totalMiles":  2.5
-                  },
-                  {
-                      "id":  2026020263,
-                      "date":  "2026-11-06",
-                      "startTimeUTC":  "2026-11-07T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "MIN",
-                      "oppName":  "Wild",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  1,
-                      "oppScore":  4,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  1,
-                      "oppPPGoals":  2,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "2/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  2,
-                                              "time":  "12:11",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  1,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  1.75
-                                         },
-                      "totalMiles":  1.75
-                  },
-                  {
-                      "id":  2026020272,
-                      "date":  "2026-11-07",
-                      "startTimeUTC":  "2026-11-08T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "DAL",
-                      "oppName":  "Stars",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  4,
-                      "result":  "L",
-                      "gameOutcome":  "REG",
-                      "goals":  3,
-                      "oppPPGoals":  3,
-                      "oppPPOpps":  5,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "3/5",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Misa",
-                                              "period":  1,
-                                              "time":  "07:22",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  2,
-                                              "time":  "02:47",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "W. Smith",
-                                              "period":  2,
-                                              "time":  "17:02",
-                                              "strength":  "pp"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.5
-                                         },
-                      "totalMiles":  3.5
-                  },
-                  {
-                      "id":  2026020285,
-                      "date":  "2026-11-09",
-                      "startTimeUTC":  "2026-11-10T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "NYI",
-                      "oppName":  "Islanders",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  3,
-                      "oppScore":  2,
-                      "result":  "W",
-                      "gameOutcome":  "SO",
-                      "goals":  3,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  4,
-                      "oppEmptyPP":  3,
-                      "oppPPSummary":  "1/4",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  1,
-                                              "time":  "16:41",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "T. Toffoli",
-                                              "period":  2,
-                                              "time":  "12:12",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "I. Stenberg",
-                                              "period":  5,
-                                              "time":  "00:00",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  3,
-                                             "ppMiles":  0.75,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  3.75
-                                         },
-                      "totalMiles":  3.75
-                  },
-                  {
-                      "id":  2026020298,
-                      "date":  "2026-11-11",
-                      "startTimeUTC":  "2026-11-12T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "PIT",
-                      "oppName":  "Penguins",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "OFF",
-                      "gameScheduleState":  "OK",
-                      "sharksScore":  2,
-                      "oppScore":  3,
-                      "result":  "L",
-                      "gameOutcome":  "SO",
-                      "goals":  2,
-                      "oppPPGoals":  1,
-                      "oppPPOpps":  3,
-                      "oppEmptyPP":  2,
-                      "oppPPSummary":  "1/3",
-                      "hatTricks":  0,
-                      "hatTrickPlayers":  [
-
-                                          ],
-                      "goalScorers":  [
-                                          {
-                                              "name":  "M. Celebrini",
-                                              "period":  3,
-                                              "time":  "11:32",
-                                              "strength":  "ev"
-                                          },
-                                          {
-                                              "name":  "M. Marchment",
-                                              "period":  3,
-                                              "time":  "15:49",
-                                              "strength":  "ev"
-                                          }
-                                      ],
-                      "milesBreakdown":  {
-                                             "goalsMiles":  2,
-                                             "ppMiles":  0.5,
-                                             "hatTrickMiles":  0,
-                                             "totalMiles":  2.5
-                                         },
-                      "totalMiles":  2.5
-                  },
-                  {
-                      "id":  2026020323,
-                      "date":  "2026-11-14",
-                      "startTimeUTC":  "2026-11-15T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "UTA",
-                      "oppName":  "Mammoth",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020330,
-                      "date":  "2026-11-15",
-                      "startTimeUTC":  "2026-11-16T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "NSH",
-                      "oppName":  "Predators",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020343,
-                      "date":  "2026-11-17",
-                      "startTimeUTC":  "2026-11-18T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CGY",
-                      "oppName":  "Flames",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020372,
-                      "date":  "2026-11-21",
-                      "startTimeUTC":  "2026-11-22T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "SEA",
-                      "oppName":  "Kraken",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020384,
-                      "date":  "2026-11-23",
-                      "startTimeUTC":  "2026-11-24T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "MIN",
-                      "oppName":  "Wild",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020398,
-                      "date":  "2026-11-25",
-                      "startTimeUTC":  "2026-11-26T03:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020410,
-                      "date":  "2026-11-27",
-                      "startTimeUTC":  "2026-11-27T21:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020425,
-                      "date":  "2026-11-28",
-                      "startTimeUTC":  "2026-11-29T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "COL",
-                      "oppName":  "Avalanche",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020437,
-                      "date":  "2026-12-01",
-                      "startTimeUTC":  "2026-12-02T00:30:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "NJD",
-                      "oppName":  "Devils",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020451,
-                      "date":  "2026-12-03",
-                      "startTimeUTC":  "2026-12-04T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "NYR",
-                      "oppName":  "Rangers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020460,
-                      "date":  "2026-12-04",
-                      "startTimeUTC":  "2026-12-05T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "NYI",
-                      "oppName":  "Islanders",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020476,
-                      "date":  "2026-12-06",
-                      "startTimeUTC":  "2026-12-06T20:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "PIT",
-                      "oppName":  "Penguins",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020495,
-                      "date":  "2026-12-08",
-                      "startTimeUTC":  "2026-12-09T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "SEA",
-                      "oppName":  "Kraken",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020498,
-                      "date":  "2026-12-09",
-                      "startTimeUTC":  "2026-12-10T02:30:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "LAK",
-                      "oppName":  "Kings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020513,
-                      "date":  "2026-12-11",
-                      "startTimeUTC":  "2026-12-12T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "LAK",
-                      "oppName":  "Kings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020535,
-                      "date":  "2026-12-14",
-                      "startTimeUTC":  "2026-12-15T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "VAN",
-                      "oppName":  "Canucks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020550,
-                      "date":  "2026-12-16",
-                      "startTimeUTC":  "2026-12-17T03:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020575,
-                      "date":  "2026-12-19",
-                      "startTimeUTC":  "2026-12-20T03:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "VAN",
-                      "oppName":  "Canucks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020599,
-                      "date":  "2026-12-22",
-                      "startTimeUTC":  "2026-12-23T02:40:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "SEA",
-                      "oppName":  "Kraken",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020611,
-                      "date":  "2026-12-26",
-                      "startTimeUTC":  "2026-12-27T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020624,
-                      "date":  "2026-12-28",
-                      "startTimeUTC":  "2026-12-29T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "WPG",
-                      "oppName":  "Jets",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020632,
-                      "date":  "2026-12-29",
-                      "startTimeUTC":  "2026-12-30T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "CGY",
-                      "oppName":  "Flames",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020653,
-                      "date":  "2027-01-01",
-                      "startTimeUTC":  "2027-01-01T21:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "PHI",
-                      "oppName":  "Flyers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020663,
-                      "date":  "2027-01-02",
-                      "startTimeUTC":  "2027-01-03T00:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "TOR",
-                      "oppName":  "Maple Leafs",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020680,
-                      "date":  "2027-01-04",
-                      "startTimeUTC":  "2027-01-05T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "NJD",
-                      "oppName":  "Devils",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020693,
-                      "date":  "2027-01-06",
-                      "startTimeUTC":  "2027-01-07T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "DAL",
-                      "oppName":  "Stars",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020708,
-                      "date":  "2027-01-08",
-                      "startTimeUTC":  "2027-01-09T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "WSH",
-                      "oppName":  "Capitals",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020721,
-                      "date":  "2027-01-09",
-                      "startTimeUTC":  "2027-01-10T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "NYR",
-                      "oppName":  "Rangers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020741,
-                      "date":  "2027-01-13",
-                      "startTimeUTC":  "2027-01-14T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "EDM",
-                      "oppName":  "Oilers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020750,
-                      "date":  "2027-01-14",
-                      "startTimeUTC":  "2027-01-15T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "CGY",
-                      "oppName":  "Flames",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020771,
-                      "date":  "2027-01-16",
-                      "startTimeUTC":  "2027-01-17T03:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "SEA",
-                      "oppName":  "Kraken",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020781,
-                      "date":  "2027-01-18",
-                      "startTimeUTC":  "2027-01-18T21:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "UTA",
-                      "oppName":  "Mammoth",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020823,
-                      "date":  "2027-01-23",
-                      "startTimeUTC":  "2027-01-24T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "EDM",
-                      "oppName":  "Oilers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020860,
-                      "date":  "2027-01-28",
-                      "startTimeUTC":  "2027-01-29T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "NSH",
-                      "oppName":  "Predators",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020867,
-                      "date":  "2027-01-30",
-                      "startTimeUTC":  "2027-01-30T21:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CHI",
-                      "oppName":  "Blackhawks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020902,
-                      "date":  "2027-02-10",
-                      "startTimeUTC":  "2027-02-11T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CHI",
-                      "oppName":  "Blackhawks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020914,
-                      "date":  "2027-02-13",
-                      "startTimeUTC":  "2027-02-13T21:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "DET",
-                      "oppName":  "Red Wings",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020935,
-                      "date":  "2027-02-15",
-                      "startTimeUTC":  "2027-02-16T00:30:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "WPG",
-                      "oppName":  "Jets",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020961,
-                      "date":  "2027-02-19",
-                      "startTimeUTC":  "2027-02-20T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "WSH",
-                      "oppName":  "Capitals",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020980,
-                      "date":  "2027-02-21",
-                      "startTimeUTC":  "2027-02-21T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "FLA",
-                      "oppName":  "Panthers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026020992,
-                      "date":  "2027-02-23",
-                      "startTimeUTC":  "2027-02-24T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "TBL",
-                      "oppName":  "Lightning",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021006,
-                      "date":  "2027-02-25",
-                      "startTimeUTC":  "2027-02-26T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "CAR",
-                      "oppName":  "Hurricanes",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021023,
-                      "date":  "2027-02-27",
-                      "startTimeUTC":  "2027-02-28T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "PHI",
-                      "oppName":  "Flyers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021042,
-                      "date":  "2027-03-01",
-                      "startTimeUTC":  "2027-03-02T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "MTL",
-                      "oppName":  "Canadiens",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021055,
-                      "date":  "2027-03-03",
-                      "startTimeUTC":  "2027-03-04T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CBJ",
-                      "oppName":  "Blue Jackets",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021070,
-                      "date":  "2027-03-05",
-                      "startTimeUTC":  "2027-03-06T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "COL",
-                      "oppName":  "Avalanche",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021079,
-                      "date":  "2027-03-06",
-                      "startTimeUTC":  "2027-03-07T03:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "TBL",
-                      "oppName":  "Lightning",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021103,
-                      "date":  "2027-03-09",
-                      "startTimeUTC":  "2027-03-10T03:30:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "VGK",
-                      "oppName":  "Golden Knights",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021111,
-                      "date":  "2027-03-11",
-                      "startTimeUTC":  "2027-03-12T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "STL",
-                      "oppName":  "Blues",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021129,
-                      "date":  "2027-03-13",
-                      "startTimeUTC":  "2027-03-14T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "CBJ",
-                      "oppName":  "Blue Jackets",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021140,
-                      "date":  "2027-03-15",
-                      "startTimeUTC":  "2027-03-15T23:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "BUF",
-                      "oppName":  "Sabres",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021151,
-                      "date":  "2027-03-16",
-                      "startTimeUTC":  "2027-03-17T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "CHI",
-                      "oppName":  "Blackhawks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021167,
-                      "date":  "2027-03-18",
-                      "startTimeUTC":  "2027-03-19T00:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "WPG",
-                      "oppName":  "Jets",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021185,
-                      "date":  "2027-03-20",
-                      "startTimeUTC":  "2027-03-21T02:30:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "CAR",
-                      "oppName":  "Hurricanes",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021195,
-                      "date":  "2027-03-22",
-                      "startTimeUTC":  "2027-03-23T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021210,
-                      "date":  "2027-03-24",
-                      "startTimeUTC":  "2027-03-25T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021226,
-                      "date":  "2027-03-26",
-                      "startTimeUTC":  "2027-03-27T01:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "UTA",
-                      "oppName":  "Mammoth",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021247,
-                      "date":  "2027-03-29",
-                      "startTimeUTC":  "2027-03-30T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "COL",
-                      "oppName":  "Avalanche",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021260,
-                      "date":  "2027-03-31",
-                      "startTimeUTC":  "2027-04-01T00:30:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "EDM",
-                      "oppName":  "Oilers",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021287,
-                      "date":  "2027-04-03",
-                      "startTimeUTC":  "2027-04-04T02:00:00Z",
-                      "isHome":  false,
-                      "oppAbbrev":  "VAN",
-                      "oppName":  "Canucks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021295,
-                      "date":  "2027-04-04",
-                      "startTimeUTC":  "2027-04-05T01:30:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "STL",
-                      "oppName":  "Blues",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021323,
-                      "date":  "2027-04-08",
-                      "startTimeUTC":  "2027-04-09T02:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "MIN",
-                      "oppName":  "Wild",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  },
-                  {
-                      "id":  2026021331,
-                      "date":  "2027-04-10",
-                      "startTimeUTC":  "2027-04-10T20:00:00Z",
-                      "isHome":  true,
-                      "oppAbbrev":  "ANA",
-                      "oppName":  "Ducks",
-                      "oppLogo":  "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
-                      "sharksLogo":  "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-                      "gameState":  "FUT",
-                      "gameScheduleState":  "OK"
-                  }
-              ]
+{
+  "date": "2026-11-12",
+  "played": false,
+  "sharks_score": 0,
+  "opp_score": 0,
+  "opp_name": "",
+  "goals": 0,
+  "pp_goals": 0,
+  "opp_empty_pp": 0,
+  "hat_tricks": 0,
+  "total_miles": 0.0,
+  "last_updated": "2026-11-13T14:15:00.875231-08:00",
+  "today_date": "2026-11-13",
+  "yesterday_game": null,
+  "latest_completed_game": {
+    "id": 2026020298,
+    "date": "2026-11-11",
+    "startTimeUTC": "2026-11-12T03:00:00Z",
+    "isHome": true,
+    "oppAbbrev": "PIT",
+    "oppName": "Penguins",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 2,
+    "oppScore": 3,
+    "result": "L",
+    "gameOutcome": "SO",
+    "goals": 2,
+    "oppPPGoals": 0,
+    "oppPPOpps": 0,
+    "oppEmptyPP": 0,
+    "oppPPSummary": "0/0",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [],
+    "milesBreakdown": {
+      "goalsMiles": 2.0,
+      "ppMiles": 0.0,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 2.0
+    },
+    "totalMiles": 2.0
+  },
+  "next_game": {
+    "id": 2026020323,
+    "date": "2026-11-14",
+    "startTimeUTC": "2026-11-15T02:00:00Z",
+    "isHome": false,
+    "oppAbbrev": "UTA",
+    "oppName": "Mammoth",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "FUT",
+    "gameScheduleState": "OK"
+  },
+  "season_summary": {
+    "total_miles": 88.25,
+    "games_played": 25,
+    "record": "10-12-3",
+    "wins": 10,
+    "losses": 12,
+    "ot_losses": 3,
+    "total_goals": 70,
+    "total_empty_pp": 65,
+    "total_hat_tricks": 1,
+    "avg_miles_per_game": 3.53
+  },
+  "games": [
+    {
+      "id": 2026010009,
+      "date": "2026-09-20",
+      "startTimeUTC": "2026-09-20T20:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FINAL",
+      "gameScheduleState": "OK",
+      "sharksScore": 2,
+      "oppScore": 6,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 2,
+      "oppPPGoals": 1,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "1/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "E. Pohlkamp",
+          "period": 1,
+          "time": "01:37",
+          "strength": "ev"
+        },
+        {
+          "name": "J. Huntington",
+          "period": 2,
+          "time": "11:05",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 2.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 2.5
+      },
+      "totalMiles": 2.5
+    },
+    {
+      "id": 2026010032,
+      "date": "2026-09-22",
+      "startTimeUTC": "2026-09-23T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FINAL",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "gameOutcome": "SO",
+      "goals": 1,
+      "oppPPGoals": 0,
+      "oppPPOpps": 0,
+      "oppEmptyPP": 0,
+      "oppPPSummary": "0/0",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Misa",
+          "period": 3,
+          "time": "04:18",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.0,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.0
+      },
+      "totalMiles": 1.0
+    },
+    {
+      "id": 2026010039,
+      "date": "2026-09-24",
+      "startTimeUTC": "2026-09-25T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FINAL",
+      "gameScheduleState": "OK",
+      "sharksScore": 10,
+      "oppScore": 0,
+      "result": "W",
+      "gameOutcome": "REG",
+      "goals": 10,
+      "oppPPGoals": 0,
+      "oppPPOpps": 4,
+      "oppEmptyPP": 4,
+      "oppPPSummary": "0/4",
+      "hatTricks": 1,
+      "hatTrickPlayers": [
+        "I. Stenberg (3)"
+      ],
+      "goalScorers": [
+        {
+          "name": "M. Marchment",
+          "period": 1,
+          "time": "03:55",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 1,
+          "time": "05:29",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Chernyshov",
+          "period": 1,
+          "time": "09:29",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Misa",
+          "period": 1,
+          "time": "11:33",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Chernyshov",
+          "period": 1,
+          "time": "15:45",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 2,
+          "time": "03:04",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Marchment",
+          "period": 2,
+          "time": "12:57",
+          "strength": "ev"
+        },
+        {
+          "name": "B. Leason",
+          "period": 3,
+          "time": "07:54",
+          "strength": "pp"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 3,
+          "time": "16:57",
+          "strength": "pp"
+        },
+        {
+          "name": "F. Bystedt",
+          "period": 3,
+          "time": "17:23",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 10.0,
+        "ppMiles": 1.0,
+        "hatTrickMiles": 2.0,
+        "totalMiles": 13.0
+      },
+      "totalMiles": 13.0
+    },
+    {
+      "id": 2026010063,
+      "date": "2026-09-26",
+      "startTimeUTC": "2026-09-27T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FINAL",
+      "gameScheduleState": "OK",
+      "sharksScore": 4,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "REG",
+      "goals": 4,
+      "oppPPGoals": 1,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 4,
+      "oppPPSummary": "1/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "D. Orlov",
+          "period": 1,
+          "time": "19:20",
+          "strength": "pp"
+        },
+        {
+          "name": "M. Celebrini",
+          "period": 2,
+          "time": "06:45",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Marchment",
+          "period": 3,
+          "time": "09:47",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Misa",
+          "period": 3,
+          "time": "14:54",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 4.0,
+        "ppMiles": 1.0,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 5.0
+      },
+      "totalMiles": 5.0
+    },
+    {
+      "id": 2026020016,
+      "date": "2026-10-01",
+      "startTimeUTC": "2026-10-02T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "FLA",
+      "oppName": "Panthers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 4,
+      "oppScore": 3,
+      "result": "W",
+      "gameOutcome": "OT",
+      "goals": 4,
+      "oppPPGoals": 1,
+      "oppPPOpps": 6,
+      "oppEmptyPP": 5,
+      "oppPPSummary": "1/6",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Marchment",
+          "period": 1,
+          "time": "14:20",
+          "strength": "ev"
+        },
+        {
+          "name": "W. Smith",
+          "period": 2,
+          "time": "05:52",
+          "strength": "sh"
+        },
+        {
+          "name": "W. Smith",
+          "period": 2,
+          "time": "10:37",
+          "strength": "pp"
+        },
+        {
+          "name": "L. Cagnoni",
+          "period": 4,
+          "time": "03:14",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 4.0,
+        "ppMiles": 1.25,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 5.25
+      },
+      "totalMiles": 5.25
+    },
+    {
+      "id": 2026020034,
+      "date": "2026-10-03",
+      "startTimeUTC": "2026-10-04T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "LAK",
+      "oppName": "Kings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 5,
+      "oppScore": 4,
+      "result": "W",
+      "gameOutcome": "OT",
+      "goals": 5,
+      "oppPPGoals": 2,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 1,
+      "oppPPSummary": "2/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "T. Toffoli",
+          "period": 2,
+          "time": "01:48",
+          "strength": "pp"
+        },
+        {
+          "name": "K. Sherwood",
+          "period": 2,
+          "time": "09:52",
+          "strength": "ev"
+        },
+        {
+          "name": "N. Allan",
+          "period": 2,
+          "time": "12:32",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Chernyshov",
+          "period": 3,
+          "time": "04:08",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Chernyshov",
+          "period": 4,
+          "time": "03:18",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 5.0,
+        "ppMiles": 0.25,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 5.25
+      },
+      "totalMiles": 5.25
+    },
+    {
+      "id": 2026020043,
+      "date": "2026-10-05",
+      "startTimeUTC": "2026-10-06T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "DAL",
+      "oppName": "Stars",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 0,
+      "oppScore": 5,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 0,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [],
+      "milesBreakdown": {
+        "goalsMiles": 0.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 0.75
+      },
+      "totalMiles": 0.75
+    },
+    {
+      "id": 2026020063,
+      "date": "2026-10-08",
+      "startTimeUTC": "2026-10-09T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "STL",
+      "oppName": "Blues",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "OT",
+      "goals": 3,
+      "oppPPGoals": 0,
+      "oppPPOpps": 2,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "0/2",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "T. Toffoli",
+          "period": 2,
+          "time": "08:48",
+          "strength": "ev"
+        },
+        {
+          "name": "C. Graf",
+          "period": 3,
+          "time": "06:05",
+          "strength": "ev"
+        },
+        {
+          "name": "D. Nurse",
+          "period": 4,
+          "time": "01:03",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.5
+      },
+      "totalMiles": 3.5
+    },
+    {
+      "id": 2026020072,
+      "date": "2026-10-10",
+      "startTimeUTC": "2026-10-10T20:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "EDM",
+      "oppName": "Oilers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 1,
+      "oppPPGoals": 0,
+      "oppPPOpps": 2,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "0/2",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Celebrini",
+          "period": 3,
+          "time": "11:19",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.5
+      },
+      "totalMiles": 1.5
+    },
+    {
+      "id": 2026020105,
+      "date": "2026-10-13",
+      "startTimeUTC": "2026-10-14T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "BOS",
+      "oppName": "Bruins",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 6,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 3,
+      "oppPPGoals": 0,
+      "oppPPOpps": 2,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "0/2",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "J. Trouba",
+          "period": 1,
+          "time": "15:29",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 2,
+          "time": "05:48",
+          "strength": "pp"
+        },
+        {
+          "name": "M. Celebrini",
+          "period": 3,
+          "time": "05:04",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.5
+      },
+      "totalMiles": 3.5
+    },
+    {
+      "id": 2026020115,
+      "date": "2026-10-15",
+      "startTimeUTC": "2026-10-16T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "NSH",
+      "oppName": "Predators",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "SO",
+      "goals": 3,
+      "oppPPGoals": 1,
+      "oppPPOpps": 4,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "1/4",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Marchment",
+          "period": 1,
+          "time": "05:30",
+          "strength": "ev"
+        },
+        {
+          "name": "W. Smith",
+          "period": 3,
+          "time": "04:28",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Celebrini",
+          "period": 5,
+          "time": "00:00",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.75
+      },
+      "totalMiles": 3.75
+    },
+    {
+      "id": 2026020127,
+      "date": "2026-10-17",
+      "startTimeUTC": "2026-10-17T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "DET",
+      "oppName": "Red Wings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 4,
+      "result": "L",
+      "gameOutcome": "SO",
+      "goals": 3,
+      "oppPPGoals": 1,
+      "oppPPOpps": 4,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "1/4",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "D. Orlov",
+          "period": 1,
+          "time": "17:59",
+          "strength": "pp"
+        },
+        {
+          "name": "M. Celebrini",
+          "period": 2,
+          "time": "04:55",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 3,
+          "time": "02:48",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.75
+      },
+      "totalMiles": 3.75
+    },
+    {
+      "id": 2026020139,
+      "date": "2026-10-19",
+      "startTimeUTC": "2026-10-19T23:30:00Z",
+      "isHome": false,
+      "oppAbbrev": "TOR",
+      "oppName": "Maple Leafs",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 3,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 1,
+      "oppPPGoals": 2,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "2/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Marchment",
+          "period": 1,
+          "time": "13:54",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.75
+      },
+      "totalMiles": 1.75
+    },
+    {
+      "id": 2026020141,
+      "date": "2026-10-20",
+      "startTimeUTC": "2026-10-20T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "MTL",
+      "oppName": "Canadiens",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 4,
+      "oppScore": 3,
+      "result": "W",
+      "gameOutcome": "OT",
+      "goals": 4,
+      "oppPPGoals": 0,
+      "oppPPOpps": 2,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "0/2",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Celebrini",
+          "period": 1,
+          "time": "13:49",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Misa",
+          "period": 3,
+          "time": "05:36",
+          "strength": "ev"
+        },
+        {
+          "name": "T. Toffoli",
+          "period": 3,
+          "time": "11:09",
+          "strength": "pp"
+        },
+        {
+          "name": "M. Celebrini",
+          "period": 4,
+          "time": "02:13",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 4.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 4.5
+      },
+      "totalMiles": 4.5
+    },
+    {
+      "id": 2026020156,
+      "date": "2026-10-22",
+      "startTimeUTC": "2026-10-22T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "OTT",
+      "oppName": "Senators",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 6,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "REG",
+      "goals": 6,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "N. Allan",
+          "period": 1,
+          "time": "11:04",
+          "strength": "ev"
+        },
+        {
+          "name": "T. Toffoli",
+          "period": 2,
+          "time": "09:13",
+          "strength": "pp"
+        },
+        {
+          "name": "C. Graf",
+          "period": 2,
+          "time": "12:00",
+          "strength": "sh"
+        },
+        {
+          "name": "J. Trouba",
+          "period": 2,
+          "time": "13:18",
+          "strength": "ev"
+        },
+        {
+          "name": "Z. Ostapchuk",
+          "period": 3,
+          "time": "16:31",
+          "strength": "sh"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 3,
+          "time": "19:43",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 6.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 6.75
+      },
+      "totalMiles": 6.75
+    },
+    {
+      "id": 2026020170,
+      "date": "2026-10-24",
+      "startTimeUTC": "2026-10-24T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "BOS",
+      "oppName": "Bruins",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/BOS_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 4,
+      "oppScore": 6,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 4,
+      "oppPPGoals": 1,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 4,
+      "oppPPSummary": "1/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Misa",
+          "period": 1,
+          "time": "05:54",
+          "strength": "pp"
+        },
+        {
+          "name": "K. Sherwood",
+          "period": 2,
+          "time": "13:34",
+          "strength": "sh"
+        },
+        {
+          "name": "D. Orlov",
+          "period": 3,
+          "time": "04:03",
+          "strength": "pp"
+        },
+        {
+          "name": "W. Smith",
+          "period": 3,
+          "time": "12:27",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 4.0,
+        "ppMiles": 1.0,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 5.0
+      },
+      "totalMiles": 5.0
+    },
+    {
+      "id": 2026020198,
+      "date": "2026-10-27",
+      "startTimeUTC": "2026-10-28T02:30:00Z",
+      "isHome": true,
+      "oppAbbrev": "BUF",
+      "oppName": "Sabres",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 0,
+      "oppScore": 2,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 0,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [],
+      "milesBreakdown": {
+        "goalsMiles": 0.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 0.75
+      },
+      "totalMiles": 0.75
+    },
+    {
+      "id": 2026020213,
+      "date": "2026-10-29",
+      "startTimeUTC": "2026-10-30T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "VAN",
+      "oppName": "Canucks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "REG",
+      "goals": 3,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "W. Smith",
+          "period": 3,
+          "time": "08:00",
+          "strength": "pp"
+        },
+        {
+          "name": "W. Smith",
+          "period": 3,
+          "time": "10:39",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Marchment",
+          "period": 3,
+          "time": "10:50",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.75
+      },
+      "totalMiles": 3.75
+    },
+    {
+      "id": 2026020222,
+      "date": "2026-10-31",
+      "startTimeUTC": "2026-10-31T20:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "OTT",
+      "oppName": "Senators",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 5,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 1,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Misa",
+          "period": 1,
+          "time": "16:06",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.75
+      },
+      "totalMiles": 1.75
+    },
+    {
+      "id": 2026020235,
+      "date": "2026-11-02",
+      "startTimeUTC": "2026-11-03T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "CGY",
+      "oppName": "Flames",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 2,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 1,
+      "oppPPGoals": 0,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "0/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "S. Dickinson",
+          "period": 3,
+          "time": "11:57",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.75
+      },
+      "totalMiles": 1.75
+    },
+    {
+      "id": 2026020249,
+      "date": "2026-11-04",
+      "startTimeUTC": "2026-11-05T03:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "LAK",
+      "oppName": "Kings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 2,
+      "oppScore": 7,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 2,
+      "oppPPGoals": 3,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "3/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Celebrini",
+          "period": 2,
+          "time": "05:07",
+          "strength": "pp"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 3,
+          "time": "09:41",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 2.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 2.5
+      },
+      "totalMiles": 2.5
+    },
+    {
+      "id": 2026020263,
+      "date": "2026-11-06",
+      "startTimeUTC": "2026-11-07T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "MIN",
+      "oppName": "Wild",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 1,
+      "oppScore": 4,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 1,
+      "oppPPGoals": 2,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "2/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Celebrini",
+          "period": 2,
+          "time": "12:11",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 1.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 1.75
+      },
+      "totalMiles": 1.75
+    },
+    {
+      "id": 2026020272,
+      "date": "2026-11-07",
+      "startTimeUTC": "2026-11-08T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "DAL",
+      "oppName": "Stars",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 4,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 3,
+      "oppPPGoals": 3,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "3/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "M. Misa",
+          "period": 1,
+          "time": "07:22",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 2,
+          "time": "02:47",
+          "strength": "ev"
+        },
+        {
+          "name": "W. Smith",
+          "period": 2,
+          "time": "17:02",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.5
+      },
+      "totalMiles": 3.5
+    },
+    {
+      "id": 2026020285,
+      "date": "2026-11-09",
+      "startTimeUTC": "2026-11-10T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "NYI",
+      "oppName": "Islanders",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 3,
+      "oppScore": 2,
+      "result": "W",
+      "gameOutcome": "SO",
+      "goals": 3,
+      "oppPPGoals": 1,
+      "oppPPOpps": 4,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "1/4",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "I. Stenberg",
+          "period": 1,
+          "time": "16:41",
+          "strength": "ev"
+        },
+        {
+          "name": "T. Toffoli",
+          "period": 2,
+          "time": "12:12",
+          "strength": "ev"
+        },
+        {
+          "name": "I. Stenberg",
+          "period": 5,
+          "time": "00:00",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 3.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 3.75
+      },
+      "totalMiles": 3.75
+    },
+    {
+      "id": 2026020298,
+      "date": "2026-11-11",
+      "startTimeUTC": "2026-11-12T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "PIT",
+      "oppName": "Penguins",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 2,
+      "oppScore": 3,
+      "result": "L",
+      "gameOutcome": "SO",
+      "goals": 2,
+      "oppPPGoals": 0,
+      "oppPPOpps": 0,
+      "oppEmptyPP": 0,
+      "oppPPSummary": "0/0",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [],
+      "milesBreakdown": {
+        "goalsMiles": 2.0,
+        "ppMiles": 0.0,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 2.0
+      },
+      "totalMiles": 2.0
+    },
+    {
+      "id": 2026020323,
+      "date": "2026-11-14",
+      "startTimeUTC": "2026-11-15T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "UTA",
+      "oppName": "Mammoth",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020330,
+      "date": "2026-11-15",
+      "startTimeUTC": "2026-11-16T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "NSH",
+      "oppName": "Predators",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020343,
+      "date": "2026-11-17",
+      "startTimeUTC": "2026-11-18T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "CGY",
+      "oppName": "Flames",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020372,
+      "date": "2026-11-21",
+      "startTimeUTC": "2026-11-22T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "SEA",
+      "oppName": "Kraken",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020384,
+      "date": "2026-11-23",
+      "startTimeUTC": "2026-11-24T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "MIN",
+      "oppName": "Wild",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020398,
+      "date": "2026-11-25",
+      "startTimeUTC": "2026-11-26T03:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020410,
+      "date": "2026-11-27",
+      "startTimeUTC": "2026-11-27T21:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020425,
+      "date": "2026-11-28",
+      "startTimeUTC": "2026-11-29T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "COL",
+      "oppName": "Avalanche",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020437,
+      "date": "2026-12-01",
+      "startTimeUTC": "2026-12-02T00:30:00Z",
+      "isHome": false,
+      "oppAbbrev": "NJD",
+      "oppName": "Devils",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020451,
+      "date": "2026-12-03",
+      "startTimeUTC": "2026-12-04T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "NYR",
+      "oppName": "Rangers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020460,
+      "date": "2026-12-04",
+      "startTimeUTC": "2026-12-05T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "NYI",
+      "oppName": "Islanders",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020476,
+      "date": "2026-12-06",
+      "startTimeUTC": "2026-12-06T20:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "PIT",
+      "oppName": "Penguins",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020495,
+      "date": "2026-12-08",
+      "startTimeUTC": "2026-12-09T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "SEA",
+      "oppName": "Kraken",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020498,
+      "date": "2026-12-09",
+      "startTimeUTC": "2026-12-10T02:30:00Z",
+      "isHome": false,
+      "oppAbbrev": "LAK",
+      "oppName": "Kings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020513,
+      "date": "2026-12-11",
+      "startTimeUTC": "2026-12-12T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "LAK",
+      "oppName": "Kings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020535,
+      "date": "2026-12-14",
+      "startTimeUTC": "2026-12-15T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "VAN",
+      "oppName": "Canucks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020550,
+      "date": "2026-12-16",
+      "startTimeUTC": "2026-12-17T03:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020575,
+      "date": "2026-12-19",
+      "startTimeUTC": "2026-12-20T03:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "VAN",
+      "oppName": "Canucks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020599,
+      "date": "2026-12-22",
+      "startTimeUTC": "2026-12-23T02:40:00Z",
+      "isHome": false,
+      "oppAbbrev": "SEA",
+      "oppName": "Kraken",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020611,
+      "date": "2026-12-26",
+      "startTimeUTC": "2026-12-27T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020624,
+      "date": "2026-12-28",
+      "startTimeUTC": "2026-12-29T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "WPG",
+      "oppName": "Jets",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020632,
+      "date": "2026-12-29",
+      "startTimeUTC": "2026-12-30T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "CGY",
+      "oppName": "Flames",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020653,
+      "date": "2027-01-01",
+      "startTimeUTC": "2027-01-01T21:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "PHI",
+      "oppName": "Flyers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020663,
+      "date": "2027-01-02",
+      "startTimeUTC": "2027-01-03T00:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "TOR",
+      "oppName": "Maple Leafs",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020680,
+      "date": "2027-01-04",
+      "startTimeUTC": "2027-01-05T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "NJD",
+      "oppName": "Devils",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020693,
+      "date": "2027-01-06",
+      "startTimeUTC": "2027-01-07T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "DAL",
+      "oppName": "Stars",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/DAL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020708,
+      "date": "2027-01-08",
+      "startTimeUTC": "2027-01-09T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "WSH",
+      "oppName": "Capitals",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020721,
+      "date": "2027-01-09",
+      "startTimeUTC": "2027-01-10T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "NYR",
+      "oppName": "Rangers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020741,
+      "date": "2027-01-13",
+      "startTimeUTC": "2027-01-14T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "EDM",
+      "oppName": "Oilers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020750,
+      "date": "2027-01-14",
+      "startTimeUTC": "2027-01-15T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "CGY",
+      "oppName": "Flames",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020771,
+      "date": "2027-01-16",
+      "startTimeUTC": "2027-01-17T03:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "SEA",
+      "oppName": "Kraken",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020781,
+      "date": "2027-01-18",
+      "startTimeUTC": "2027-01-18T21:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "UTA",
+      "oppName": "Mammoth",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020823,
+      "date": "2027-01-23",
+      "startTimeUTC": "2027-01-24T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "EDM",
+      "oppName": "Oilers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020860,
+      "date": "2027-01-28",
+      "startTimeUTC": "2027-01-29T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "NSH",
+      "oppName": "Predators",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020867,
+      "date": "2027-01-30",
+      "startTimeUTC": "2027-01-30T21:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "CHI",
+      "oppName": "Blackhawks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020902,
+      "date": "2027-02-10",
+      "startTimeUTC": "2027-02-11T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "CHI",
+      "oppName": "Blackhawks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020914,
+      "date": "2027-02-13",
+      "startTimeUTC": "2027-02-13T21:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "DET",
+      "oppName": "Red Wings",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/DET_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020935,
+      "date": "2027-02-15",
+      "startTimeUTC": "2027-02-16T00:30:00Z",
+      "isHome": true,
+      "oppAbbrev": "WPG",
+      "oppName": "Jets",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020961,
+      "date": "2027-02-19",
+      "startTimeUTC": "2027-02-20T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "WSH",
+      "oppName": "Capitals",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020980,
+      "date": "2027-02-21",
+      "startTimeUTC": "2027-02-21T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "FLA",
+      "oppName": "Panthers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026020992,
+      "date": "2027-02-23",
+      "startTimeUTC": "2027-02-24T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "TBL",
+      "oppName": "Lightning",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021006,
+      "date": "2027-02-25",
+      "startTimeUTC": "2027-02-26T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "CAR",
+      "oppName": "Hurricanes",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021023,
+      "date": "2027-02-27",
+      "startTimeUTC": "2027-02-28T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "PHI",
+      "oppName": "Flyers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PHI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021042,
+      "date": "2027-03-01",
+      "startTimeUTC": "2027-03-02T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "MTL",
+      "oppName": "Canadiens",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021055,
+      "date": "2027-03-03",
+      "startTimeUTC": "2027-03-04T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "CBJ",
+      "oppName": "Blue Jackets",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021070,
+      "date": "2027-03-05",
+      "startTimeUTC": "2027-03-06T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "COL",
+      "oppName": "Avalanche",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021079,
+      "date": "2027-03-06",
+      "startTimeUTC": "2027-03-07T03:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "TBL",
+      "oppName": "Lightning",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/TBL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021103,
+      "date": "2027-03-09",
+      "startTimeUTC": "2027-03-10T03:30:00Z",
+      "isHome": false,
+      "oppAbbrev": "VGK",
+      "oppName": "Golden Knights",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021111,
+      "date": "2027-03-11",
+      "startTimeUTC": "2027-03-12T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "STL",
+      "oppName": "Blues",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021129,
+      "date": "2027-03-13",
+      "startTimeUTC": "2027-03-14T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "CBJ",
+      "oppName": "Blue Jackets",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CBJ_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021140,
+      "date": "2027-03-15",
+      "startTimeUTC": "2027-03-15T23:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "BUF",
+      "oppName": "Sabres",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021151,
+      "date": "2027-03-16",
+      "startTimeUTC": "2027-03-17T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "CHI",
+      "oppName": "Blackhawks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021167,
+      "date": "2027-03-18",
+      "startTimeUTC": "2027-03-19T00:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "WPG",
+      "oppName": "Jets",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021185,
+      "date": "2027-03-20",
+      "startTimeUTC": "2027-03-21T02:30:00Z",
+      "isHome": true,
+      "oppAbbrev": "CAR",
+      "oppName": "Hurricanes",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021195,
+      "date": "2027-03-22",
+      "startTimeUTC": "2027-03-23T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021210,
+      "date": "2027-03-24",
+      "startTimeUTC": "2027-03-25T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021226,
+      "date": "2027-03-26",
+      "startTimeUTC": "2027-03-27T01:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "UTA",
+      "oppName": "Mammoth",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021247,
+      "date": "2027-03-29",
+      "startTimeUTC": "2027-03-30T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "COL",
+      "oppName": "Avalanche",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/COL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021260,
+      "date": "2027-03-31",
+      "startTimeUTC": "2027-04-01T00:30:00Z",
+      "isHome": false,
+      "oppAbbrev": "EDM",
+      "oppName": "Oilers",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/EDM_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021287,
+      "date": "2027-04-03",
+      "startTimeUTC": "2027-04-04T02:00:00Z",
+      "isHome": false,
+      "oppAbbrev": "VAN",
+      "oppName": "Canucks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/VAN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021295,
+      "date": "2027-04-04",
+      "startTimeUTC": "2027-04-05T01:30:00Z",
+      "isHome": true,
+      "oppAbbrev": "STL",
+      "oppName": "Blues",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/STL_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021323,
+      "date": "2027-04-08",
+      "startTimeUTC": "2027-04-09T02:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "MIN",
+      "oppName": "Wild",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    },
+    {
+      "id": 2026021331,
+      "date": "2027-04-10",
+      "startTimeUTC": "2027-04-10T20:00:00Z",
+      "isHome": true,
+      "oppAbbrev": "ANA",
+      "oppName": "Ducks",
+      "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+      "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+      "gameState": "FUT",
+      "gameScheduleState": "OK"
+    }
+  ]
 }
