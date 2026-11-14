@@ -907,6 +907,11 @@
       to { opacity: 1; transform: scale(1); }
     }
 
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
     .modal-header {
       background: linear-gradient(135deg, #092027 0%, var(--bg-card) 100%);
       padding: 20px 24px;
@@ -1756,16 +1761,272 @@
       renderAnalytics();
     }
 
-    // Load data.json
+    const NHL_PROXY_BASE = 'https://sharks-nhl-proxy.tonyyasi.workers.dev/v1';
+    const SHARKS_TEAM_ID = 28;
+
+    function getPacificDateStr(offsetDays = 0) {
+      const target = new Date(Date.now() + offsetDays * 86400000);
+      return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/Los_Angeles',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(target);
+    }
+
+    async function syncLiveFromNHLProxy() {
+      const scheduleRes = await fetch(`${NHL_PROXY_BASE}/club-schedule-season/SJS/now`);
+      if (!scheduleRes.ok) throw new Error(`NHL proxy returned HTTP ${scheduleRes.status}`);
+      const scheduleData = await scheduleRes.json();
+      const rawGames = scheduleData.games || [];
+
+      const cachedMap = {};
+      if (appData && Array.isArray(appData.games)) {
+        appData.games.forEach(g => {
+          if (g.id && g.totalMiles !== undefined && g.totalMiles !== null) {
+            cachedMap[g.id] = g;
+          }
+        });
+      }
+
+      const todayStr = getPacificDateStr(0);
+      const yesterdayStr = getPacificDateStr(-1);
+
+      let newlyFetched = 0;
+      let totalSeasonMiles = 0;
+      let totalGoals = 0;
+      let totalEmptyPP = 0;
+      let totalHatTricks = 0;
+      let wins = 0;
+      let losses = 0;
+      let otLosses = 0;
+
+      let yesterdayGame = null;
+      let latestCompletedGame = null;
+      let nextGame = null;
+
+      const processedGames = [];
+
+      for (const rawG of rawGames) {
+        const gameId = rawG.id;
+        const gameState = rawG.gameState;
+        const isFinal = gameState === 'FINAL' || gameState === 'OFF';
+        const isHome = rawG.homeTeam && rawG.homeTeam.id === SHARKS_TEAM_ID;
+        const sjsData = isHome ? rawG.homeTeam : rawG.awayTeam;
+        const oppData = isHome ? rawG.awayTeam : rawG.homeTeam;
+
+        const baseObj = {
+          id: gameId,
+          date: rawG.gameDate,
+          startTimeUTC: rawG.startTimeUTC,
+          isHome,
+          oppAbbrev: oppData.abbrev || '',
+          oppName: (oppData.commonName && oppData.commonName.default) || (oppData.placeName && oppData.placeName.default) || oppData.abbrev || '',
+          oppLogo: oppData.logo || '',
+          sharksLogo: sjsData.logo || '',
+          gameState,
+          gameScheduleState: rawG.gameScheduleState || 'OK'
+        };
+
+        let gameObj = baseObj;
+
+        if (isFinal) {
+          if (cachedMap[gameId]) {
+            gameObj = { ...cachedMap[gameId], ...baseObj };
+          } else {
+            newlyFetched++;
+            const sharksScore = parseInt(sjsData.score || 0, 10);
+            const oppScore = parseInt(oppData.score || 0, 10);
+            const result = sharksScore > oppScore ? 'W' : 'L';
+            const gameOutcome = (rawG.gameOutcome && rawG.gameOutcome.lastPeriodType) || 'REG';
+
+            let oppEmptyPP = 0;
+            let oppPPGoals = 0;
+            let oppPPOpps = 0;
+            let hatTricks = 0;
+            const hatTrickPlayers = [];
+            const goalScorers = [];
+
+            const [rrRes, landingRes] = await Promise.allSettled([
+              fetch(`${NHL_PROXY_BASE}/gamecenter/${gameId}/right-rail`).then(r => r.ok ? r.json() : null),
+              fetch(`${NHL_PROXY_BASE}/gamecenter/${gameId}/landing`).then(r => r.ok ? r.json() : null)
+            ]);
+
+            if (rrRes.status === 'fulfilled' && rrRes.value && Array.isArray(rrRes.value.teamGameStats)) {
+              const ppStat = rrRes.value.teamGameStats.find(s => s.category === 'powerPlay');
+              if (ppStat) {
+                const oppVal = isHome ? ppStat.awayValue : ppStat.homeValue;
+                const match = String(oppVal || '').match(/^(\d+)\/(\d+)$/);
+                if (match) {
+                  oppPPGoals = parseInt(match[1], 10);
+                  oppPPOpps = parseInt(match[2], 10);
+                  oppEmptyPP = Math.max(0, oppPPOpps - oppPPGoals);
+                }
+              }
+            }
+
+            if (landingRes.status === 'fulfilled' && landingRes.value && landingRes.value.summary && Array.isArray(landingRes.value.summary.scoring)) {
+              const playerCounts = {};
+              const playerNames = {};
+              landingRes.value.summary.scoring.forEach(period => {
+                const pNum = (period.periodDescriptor && period.periodDescriptor.number) || 1;
+                (period.goals || []).forEach(goal => {
+                  if (goal.teamAbbrev && goal.teamAbbrev.default === 'SJS') {
+                    const pid = String(goal.playerId || '');
+                    const pname = (goal.name && goal.name.default) || 'Unknown';
+                    goalScorers.push({
+                      name: pname,
+                      period: pNum,
+                      time: goal.timeInPeriod || '',
+                      strength: goal.strength || 'ev'
+                    });
+                    if (pid) {
+                      playerCounts[pid] = (playerCounts[pid] || 0) + 1;
+                      playerNames[pid] = pname;
+                    }
+                  }
+                });
+              });
+              Object.keys(playerCounts).forEach(pid => {
+                if (playerCounts[pid] >= 3) {
+                  hatTricks++;
+                  hatTrickPlayers.push(`${playerNames[pid]} (${playerCounts[pid]})`);
+                }
+              });
+            }
+
+            const goalsMiles = Math.round(sharksScore * 1.0 * 100) / 100;
+            const ppMiles = Math.round(oppEmptyPP * 0.25 * 100) / 100;
+            const hatTrickMiles = Math.round(hatTricks * 2.0 * 100) / 100;
+            const totalMiles = Math.round((goalsMiles + ppMiles + hatTrickMiles) * 100) / 100;
+
+            gameObj = {
+              ...baseObj,
+              sharksScore,
+              oppScore,
+              result,
+              gameOutcome,
+              goals: sharksScore,
+              oppPPGoals,
+              oppPPOpps,
+              oppEmptyPP,
+              oppPPSummary: `${oppPPGoals}/${oppPPOpps}`,
+              hatTricks,
+              hatTrickPlayers,
+              goalScorers,
+              milesBreakdown: { goalsMiles, ppMiles, hatTrickMiles, totalMiles },
+              totalMiles
+            };
+          }
+
+          totalSeasonMiles += parseFloat(gameObj.totalMiles || 0);
+          totalGoals += parseInt(gameObj.goals || 0, 10);
+          totalEmptyPP += parseInt(gameObj.oppEmptyPP || 0, 10);
+          totalHatTricks += parseInt(gameObj.hatTricks || 0, 10);
+
+          if (gameObj.result === 'W') {
+            wins++;
+          } else if (gameObj.gameOutcome === 'OT' || gameObj.gameOutcome === 'SO') {
+            otLosses++;
+          } else {
+            losses++;
+          }
+
+          latestCompletedGame = gameObj;
+        } else if (!nextGame) {
+          nextGame = gameObj;
+        }
+
+        if (gameObj.date === yesterdayStr) {
+          yesterdayGame = gameObj;
+        }
+
+        processedGames.push(gameObj);
+      }
+
+      const gamesPlayed = wins + losses + otLosses;
+      const played = Boolean(yesterdayGame && (yesterdayGame.gameState === 'FINAL' || yesterdayGame.gameState === 'OFF'));
+
+      appData = {
+        date: yesterdayStr,
+        played,
+        sharks_score: played ? yesterdayGame.sharksScore : 0,
+        opp_score: played ? yesterdayGame.oppScore : 0,
+        opp_name: played ? yesterdayGame.oppAbbrev : '',
+        goals: played ? yesterdayGame.goals : 0,
+        pp_goals: played ? yesterdayGame.oppEmptyPP : 0,
+        opp_empty_pp: played ? yesterdayGame.oppEmptyPP : 0,
+        hat_tricks: played ? yesterdayGame.hatTricks : 0,
+        total_miles: played ? yesterdayGame.totalMiles : 0,
+        last_updated: new Date().toISOString(),
+        today_date: todayStr,
+        yesterday_game: yesterdayGame,
+        latest_completed_game: latestCompletedGame,
+        next_game: nextGame,
+        season_summary: {
+          total_miles: Math.round(totalSeasonMiles * 100) / 100,
+          games_played: gamesPlayed,
+          record: `${wins}-${losses}-${otLosses}`,
+          wins,
+          losses,
+          ot_losses: otLosses,
+          total_goals: totalGoals,
+          total_empty_pp: totalEmptyPP,
+          total_hat_tricks: totalHatTricks,
+          avg_miles_per_game: gamesPlayed > 0 ? Math.round((totalSeasonMiles / gamesPlayed) * 100) / 100 : 0
+        },
+        games: processedGames
+      };
+
+      return { totalGames: processedGames.length, newlyFetched };
+    }
+
+    // Load data.json (or live NHL proxy on Refresh)
     async function loadWorkoutData(isRefresh = false) {
+      const refreshBtn = document.getElementById('refresh-btn');
       const refreshIcon = document.getElementById('refresh-icon');
       const statusContainer = document.getElementById('status-container');
 
       if (refreshIcon) refreshIcon.style.animation = 'spin 1s linear infinite';
+      if (refreshBtn && isRefresh) refreshBtn.disabled = true;
+
+      if (isRefresh) {
+        statusContainer.style.display = 'block';
+        statusContainer.innerHTML = `
+          <div class="status-alert loading">
+            <span>🦈</span>
+            <div>Syncing live game results from NHL API...</div>
+          </div>
+        `;
+        try {
+          const syncInfo = await syncLiveFromNHLProxy();
+          renderAllViews();
+          document.getElementById('last-updated-text').innerText =
+            `Last sync: ${new Date(appData.last_updated).toLocaleString()} (Live NHL API)`;
+
+          statusContainer.innerHTML = `
+            <div class="status-alert loading" style="border-color: var(--win-color); color: #A7F3D0;">
+              <span>✅</span>
+              <div>Live sync complete! Checked ${syncInfo.totalGames} games${syncInfo.newlyFetched > 0 ? ` (${syncInfo.newlyFetched} newly updated)` : ' (all up to date)'}.</div>
+            </div>
+          `;
+          setTimeout(() => {
+            if (statusContainer.innerHTML.includes('Live sync complete')) {
+              statusContainer.style.display = 'none';
+            }
+          }, 4000);
+
+          if (refreshIcon) refreshIcon.style.animation = '';
+          if (refreshBtn) refreshBtn.disabled = false;
+          return;
+        } catch (err) {
+          console.warn('Live proxy refresh failed, falling back to local data:', err);
+        }
+      }
 
       try {
         if (window.location.protocol !== 'file:') {
-          const url = 'data.json?t=' + (isRefresh ? new Date().getTime() : Date.now());
+          const url = 'data.json?t=' + Date.now();
           const response = await fetch(url);
           if (response.ok) {
             appData = await response.json();
@@ -1798,6 +2059,7 @@
       }
 
       if (refreshIcon) refreshIcon.style.animation = '';
+      if (refreshBtn) refreshBtn.disabled = false;
     }
 
     // Render Season KPIs
