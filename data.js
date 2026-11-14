@@ -1,5 +1,5 @@
 window.SHARKS_DATA = {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "played": false,
   "sharks_score": 0,
   "opp_score": 0,
@@ -9,8 +9,8 @@ window.SHARKS_DATA = {
   "opp_empty_pp": 0,
   "hat_tricks": 0,
   "total_miles": 0.0,
-  "last_updated": "2026-11-13T14:15:00.875231-08:00",
-  "today_date": "2026-11-13",
+  "last_updated": "2026-11-14T11:31:38.221219-08:00",
+  "today_date": "2026-11-14",
   "yesterday_game": null,
   "latest_completed_game": {
     "id": 2026020298,
