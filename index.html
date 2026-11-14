@@ -1194,6 +1194,32 @@
     .svg-chart-wrap {
       width: 100%;
       overflow-x: auto;
+      position: relative;
+    }
+
+    .chart-tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(8, 14, 19, 0.96);
+      border: 1px solid var(--sjs-orange);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      white-space: nowrap;
+      z-index: 20;
+      display: none;
+      transform: translate(-50%, -115%);
+    }
+
+    .chart-dot-group {
+      cursor: pointer;
+    }
+
+    .chart-dot-group:hover .chart-dot-visible {
+      r: 6;
+      fill: #FFA133;
     }
 
     /* House Bonus Rule Toggles */
@@ -1342,7 +1368,7 @@
           <div class="kpi-sub" id="kpi-games-played">0 games played</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">🛡️ Opp Failed PPs</div>
+          <div class="kpi-label">🛡️ Opp Failed Power Plays</div>
           <div class="kpi-value" id="kpi-empty-pps">0</div>
           <div class="kpi-sub">Penalty kills defended</div>
         </div>
@@ -1388,9 +1414,9 @@
               <div class="breakdown-miles" id="hero-goals-miles">+0.00 mi</div>
             </div>
             <div class="breakdown-card">
-              <div class="breakdown-title">🛡️ Opp Failed PPs</div>
+              <div class="breakdown-title">🛡️ Opp Failed Power Plays</div>
               <div class="breakdown-calc"><span id="hero-emptypp-count">0</span> × 0.25 mi</div>
-              <div class="breakdown-subtext" id="hero-opp-pp-summary">Opp PP: 0/0</div>
+              <div class="breakdown-subtext" id="hero-opp-pp-summary">Opp Power Play: 0/0</div>
               <div class="breakdown-miles" id="hero-emptypp-miles">+0.00 mi</div>
             </div>
             <div class="breakdown-card">
@@ -1473,7 +1499,7 @@
                 <th>Matchup</th>
                 <th>Result</th>
                 <th>Goals</th>
-                <th>Opp PP Defended</th>
+                <th>Opp Power Plays Defended</th>
                 <th>Hat Tricks</th>
                 <th>Miles To Run</th>
                 <th>Details</th>
@@ -1832,7 +1858,7 @@
 
         document.getElementById('hero-emptypp-count').innerText = emptyPP;
         document.getElementById('hero-emptypp-miles').innerText = `+${formatDist(emptyPP * 0.25)} ${unitShort()}`;
-        document.getElementById('hero-opp-pp-summary').innerText = `Opp PP: ${oppPPSummary} (${emptyPP} killed)`;
+        document.getElementById('hero-opp-pp-summary').innerText = `Opp Power Play: ${oppPPSummary} (${emptyPP} killed)`;
 
         document.getElementById('hero-hats-count').innerText = hats;
         document.getElementById('hero-hats-miles').innerText = `+${formatDist(hats * 2.0)} ${unitShort()}`;
@@ -2086,15 +2112,17 @@
         running += eff.totalMiles;
         return {
           idx,
+          id: g.id,
           date: g.date,
           opp: g.oppAbbrev,
+          isHome: g.isHome,
           gameMiles: eff.totalMiles,
           cumMiles: running
         };
       });
 
       const maxDisplay = toDisplayDist(running) || 1;
-      subEl.innerText = `Cumulative ${formatDist(running)} ${unitShort()} across ${completed.length} completed games`;
+      subEl.innerText = `Cumulative ${formatDist(running)} ${unitShort()} across ${completed.length} completed games (hover dots for exact numbers)`;
 
       const width = 820;
       const height = 220;
@@ -2121,9 +2149,16 @@
       const dots = points.map((p, i) => {
         const cx = xFor(i).toFixed(1);
         const cy = yFor(p.cumMiles).toFixed(1);
-        return `<circle cx="${cx}" cy="${cy}" r="3.5" fill="#EA7200" stroke="#080E13" stroke-width="1.5">
-          <title>${p.date} vs ${p.opp}: +${formatDist(p.gameMiles)} ${unitShort()} (Total: ${formatDist(p.cumMiles)} ${unitShort()})</title>
-        </circle>`;
+        const matchup = `${p.isHome ? 'vs' : '@'} ${p.opp}`;
+        const gameStr = `+${formatDist(p.gameMiles)} ${unitShort()}`;
+        const cumStr = `${formatDist(p.cumMiles)} ${unitShort()}`;
+        return `<g class="chart-dot-group"
+          onmouseenter="showChartTooltip(this, '${p.date}', '${matchup}', '${gameStr}', '${cumStr}')"
+          onmouseleave="hideChartTooltip()"
+          onclick="openGameModalById(${p.id})">
+          <circle cx="${cx}" cy="${cy}" r="12" fill="transparent" />
+          <circle class="chart-dot-visible" cx="${cx}" cy="${cy}" r="4" fill="#EA7200" stroke="#080E13" stroke-width="1.5" />
+        </g>`;
       }).join('');
 
       const firstLabel = points[0].date.slice(5);
@@ -2131,6 +2166,7 @@
       const lastLabel = points[points.length - 1].date.slice(5);
 
       container.innerHTML = `
+        <div id="chart-tooltip" class="chart-tooltip"></div>
         <svg viewBox="0 0 ${width} ${height}" style="width: 100%; min-width: 500px; height: auto; display: block;">
           <defs>
             <linearGradient id="cumAreaGrad" x1="0" y1="0" x2="0" y2="1">
@@ -2147,6 +2183,32 @@
           <text x="${width - padR}" y="${height - 10}" text-anchor="end" fill="#8EA1B0" font-size="10">${lastLabel}</text>
         </svg>
       `;
+    }
+
+    function showChartTooltip(dotGroup, dateStr, matchup, gameDist, cumDist) {
+      const container = document.getElementById('cumulative-chart-container');
+      const tooltip = document.getElementById('chart-tooltip');
+      const dot = dotGroup.querySelector('.chart-dot-visible');
+      if (!container || !tooltip || !dot) return;
+
+      const containerRect = container.getBoundingClientRect();
+      const dotRect = dot.getBoundingClientRect();
+      const left = (dotRect.left - containerRect.left) + (dotRect.width / 2) + container.scrollLeft;
+      const top = (dotRect.top - containerRect.top);
+
+      tooltip.innerHTML = `
+        <div style="font-weight: 800; color: var(--sjs-orange); margin-bottom: 2px;">${cumDist} total</div>
+        <div style="color: #F4F7F9;">${formatDate(dateStr)} · ${matchup}</div>
+        <div style="color: var(--text-muted); font-size: 11px;">Game: ${gameDist}</div>
+      `;
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+      tooltip.style.display = 'block';
+    }
+
+    function hideChartTooltip() {
+      const tooltip = document.getElementById('chart-tooltip');
+      if (tooltip) tooltip.style.display = 'none';
     }
 
     function renderMonsterRuns(completed) {
@@ -2196,7 +2258,7 @@
       const total = goalMiles + ppMiles + hatMiles + bonusMiles || 1;
       const segments = [
         { label: 'Sharks Goals (1.0 mi ea)', miles: goalMiles, color: '#008C99' },
-        { label: 'Opp Failed PPs (0.25 mi ea)', miles: ppMiles, color: '#EA7200' },
+        { label: 'Opp Failed Power Plays (0.25 mi ea)', miles: ppMiles, color: '#EA7200' },
         { label: 'Hat Tricks (2.0 mi ea)', miles: hatMiles, color: '#10B981' }
       ];
       if (bonusMiles > 0) {
@@ -2387,7 +2449,7 @@
         <div class="modal-equation-box">
           <div class="modal-equation-title">Calculation Math</div>
           <div class="modal-equation-formula">
-            (${goals} Goals × 1.0) + (${emptyPP} Failed PPs × 0.25) + (${hats} Hats × 2.0)${eff.bonusMiles > 0 ? ` + (${eff.bonusMiles.toFixed(2)} Bonus)` : ''}
+            (${goals} Goals × 1.0) + (${emptyPP} Failed Power Plays × 0.25) + (${hats} Hats × 2.0)${eff.bonusMiles > 0 ? ` + (${eff.bonusMiles.toFixed(2)} Bonus)` : ''}
           </div>
           <div class="modal-miles-result">${formatDist(eff.totalMiles)} ${unitFull().toUpperCase()}</div>
         </div>
@@ -2401,7 +2463,7 @@
           </div>
 
           <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-subtle); border-radius: 6px; font-size: 13px;">
-            <span>🛡️ Opponent Empty Power Plays (${emptyPP}) <small style="color:var(--text-dim);">[PP: ${game.oppPPSummary || '0/0'}]</small></span>
+            <span>🛡️ Opponent Empty Power Plays (${emptyPP}) <small style="color:var(--text-dim);">[Power Play: ${game.oppPPSummary || '0/0'}]</small></span>
             <strong style="color: var(--sjs-orange);">+${formatDist(emptyPP * 0.25)} ${unitShort()}</strong>
           </div>
 
