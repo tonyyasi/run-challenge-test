@@ -1,49 +1,17 @@
 window.SHARKS_DATA = {
-  "date": "2026-11-13",
-  "played": false,
-  "sharks_score": 0,
-  "opp_score": 0,
-  "opp_name": "",
-  "goals": 0,
-  "pp_goals": 0,
-  "opp_empty_pp": 0,
+  "date": "2026-11-14",
+  "played": true,
+  "sharks_score": 6,
+  "opp_score": 5,
+  "opp_name": "UTA",
+  "goals": 6,
+  "pp_goals": 3,
+  "opp_empty_pp": 3,
   "hat_tricks": 0,
-  "total_miles": 0.0,
-  "last_updated": "2026-11-14T11:31:38.221219-08:00",
-  "today_date": "2026-11-14",
-  "yesterday_game": null,
-  "latest_completed_game": {
-    "id": 2026020298,
-    "date": "2026-11-11",
-    "startTimeUTC": "2026-11-12T03:00:00Z",
-    "isHome": true,
-    "oppAbbrev": "PIT",
-    "oppName": "Penguins",
-    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/PIT_light.svg",
-    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "gameState": "OFF",
-    "gameScheduleState": "OK",
-    "sharksScore": 2,
-    "oppScore": 3,
-    "result": "L",
-    "gameOutcome": "SO",
-    "goals": 2,
-    "oppPPGoals": 0,
-    "oppPPOpps": 0,
-    "oppEmptyPP": 0,
-    "oppPPSummary": "0/0",
-    "hatTricks": 0,
-    "hatTrickPlayers": [],
-    "goalScorers": [],
-    "milesBreakdown": {
-      "goalsMiles": 2.0,
-      "ppMiles": 0.0,
-      "hatTrickMiles": 0.0,
-      "totalMiles": 2.0
-    },
-    "totalMiles": 2.0
-  },
-  "next_game": {
+  "total_miles": 6.75,
+  "last_updated": "2026-11-15T12:00:14.141513-08:00",
+  "today_date": "2026-11-15",
+  "yesterday_game": {
     "id": 2026020323,
     "date": "2026-11-14",
     "startTimeUTC": "2026-11-15T02:00:00Z",
@@ -52,20 +20,156 @@ window.SHARKS_DATA = {
     "oppName": "Mammoth",
     "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
     "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 6,
+    "oppScore": 5,
+    "result": "W",
+    "gameOutcome": "SO",
+    "goals": 6,
+    "oppPPGoals": 2,
+    "oppPPOpps": 5,
+    "oppEmptyPP": 3,
+    "oppPPSummary": "2/5",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "T. Toffoli",
+        "period": 1,
+        "time": "11:35",
+        "strength": "pp"
+      },
+      {
+        "name": "A. Gaudette",
+        "period": 2,
+        "time": "03:07",
+        "strength": "pp"
+      },
+      {
+        "name": "Z. Ostapchuk",
+        "period": 2,
+        "time": "03:13",
+        "strength": "ev"
+      },
+      {
+        "name": "E. Pohlkamp",
+        "period": 3,
+        "time": "05:23",
+        "strength": "ev"
+      },
+      {
+        "name": "D. Orlov",
+        "period": 3,
+        "time": "14:17",
+        "strength": "ev"
+      },
+      {
+        "name": "M. Marchment",
+        "period": 5,
+        "time": "00:00",
+        "strength": "ev"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 6.0,
+      "ppMiles": 0.75,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 6.75
+    },
+    "totalMiles": 6.75
+  },
+  "latest_completed_game": {
+    "id": 2026020323,
+    "date": "2026-11-14",
+    "startTimeUTC": "2026-11-15T02:00:00Z",
+    "isHome": false,
+    "oppAbbrev": "UTA",
+    "oppName": "Mammoth",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 6,
+    "oppScore": 5,
+    "result": "W",
+    "gameOutcome": "SO",
+    "goals": 6,
+    "oppPPGoals": 2,
+    "oppPPOpps": 5,
+    "oppEmptyPP": 3,
+    "oppPPSummary": "2/5",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "T. Toffoli",
+        "period": 1,
+        "time": "11:35",
+        "strength": "pp"
+      },
+      {
+        "name": "A. Gaudette",
+        "period": 2,
+        "time": "03:07",
+        "strength": "pp"
+      },
+      {
+        "name": "Z. Ostapchuk",
+        "period": 2,
+        "time": "03:13",
+        "strength": "ev"
+      },
+      {
+        "name": "E. Pohlkamp",
+        "period": 3,
+        "time": "05:23",
+        "strength": "ev"
+      },
+      {
+        "name": "D. Orlov",
+        "period": 3,
+        "time": "14:17",
+        "strength": "ev"
+      },
+      {
+        "name": "M. Marchment",
+        "period": 5,
+        "time": "00:00",
+        "strength": "ev"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 6.0,
+      "ppMiles": 0.75,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 6.75
+    },
+    "totalMiles": 6.75
+  },
+  "next_game": {
+    "id": 2026020330,
+    "date": "2026-11-15",
+    "startTimeUTC": "2026-11-16T02:00:00Z",
+    "isHome": true,
+    "oppAbbrev": "NSH",
+    "oppName": "Predators",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
     "gameState": "FUT",
     "gameScheduleState": "OK"
   },
   "season_summary": {
-    "total_miles": 88.25,
-    "games_played": 25,
-    "record": "10-12-3",
-    "wins": 10,
+    "total_miles": 95.0,
+    "games_played": 26,
+    "record": "11-12-3",
+    "wins": 11,
     "losses": 12,
     "ot_losses": 3,
-    "total_goals": 70,
-    "total_empty_pp": 65,
+    "total_goals": 76,
+    "total_empty_pp": 68,
     "total_hat_tricks": 1,
-    "avg_miles_per_game": 3.53
+    "avg_miles_per_game": 3.65
   },
   "games": [
     {
@@ -1284,8 +1388,64 @@ window.SHARKS_DATA = {
       "oppName": "Mammoth",
       "oppLogo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
       "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-      "gameState": "FUT",
-      "gameScheduleState": "OK"
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 6,
+      "oppScore": 5,
+      "result": "W",
+      "gameOutcome": "SO",
+      "goals": 6,
+      "oppPPGoals": 2,
+      "oppPPOpps": 5,
+      "oppEmptyPP": 3,
+      "oppPPSummary": "2/5",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "T. Toffoli",
+          "period": 1,
+          "time": "11:35",
+          "strength": "pp"
+        },
+        {
+          "name": "A. Gaudette",
+          "period": 2,
+          "time": "03:07",
+          "strength": "pp"
+        },
+        {
+          "name": "Z. Ostapchuk",
+          "period": 2,
+          "time": "03:13",
+          "strength": "ev"
+        },
+        {
+          "name": "E. Pohlkamp",
+          "period": 3,
+          "time": "05:23",
+          "strength": "ev"
+        },
+        {
+          "name": "D. Orlov",
+          "period": 3,
+          "time": "14:17",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Marchment",
+          "period": 5,
+          "time": "00:00",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 6.0,
+        "ppMiles": 0.75,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 6.75
+      },
+      "totalMiles": 6.75
     },
     {
       "id": 2026020330,
