@@ -1,74 +1,17 @@
 window.SHARKS_DATA = {
-  "date": "2026-11-16",
-  "played": false,
-  "sharks_score": 0,
-  "opp_score": 0,
-  "opp_name": "",
-  "goals": 0,
-  "pp_goals": 0,
-  "opp_empty_pp": 0,
+  "date": "2026-11-17",
+  "played": true,
+  "sharks_score": 2,
+  "opp_score": 5,
+  "opp_name": "CGY",
+  "goals": 2,
+  "pp_goals": 2,
+  "opp_empty_pp": 2,
   "hat_tricks": 0,
-  "total_miles": 0.0,
-  "last_updated": "2026-11-17T14:42:15.645467-08:00",
-  "today_date": "2026-11-17",
-  "yesterday_game": null,
-  "latest_completed_game": {
-    "id": 2026020330,
-    "date": "2026-11-15",
-    "startTimeUTC": "2026-11-16T02:00:00Z",
-    "isHome": true,
-    "oppAbbrev": "NSH",
-    "oppName": "Predators",
-    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg",
-    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "gameState": "OFF",
-    "gameScheduleState": "OK",
-    "sharksScore": 4,
-    "oppScore": 2,
-    "result": "W",
-    "gameOutcome": "REG",
-    "goals": 4,
-    "oppPPGoals": 1,
-    "oppPPOpps": 3,
-    "oppEmptyPP": 2,
-    "oppPPSummary": "1/3",
-    "hatTricks": 0,
-    "hatTrickPlayers": [],
-    "goalScorers": [
-      {
-        "name": "W. Smith",
-        "period": 1,
-        "time": "12:25",
-        "strength": "ev"
-      },
-      {
-        "name": "C. Graf",
-        "period": 1,
-        "time": "16:10",
-        "strength": "ev"
-      },
-      {
-        "name": "I. Stenberg",
-        "period": 2,
-        "time": "04:45",
-        "strength": "ev"
-      },
-      {
-        "name": "M. Celebrini",
-        "period": 3,
-        "time": "07:40",
-        "strength": "ev"
-      }
-    ],
-    "milesBreakdown": {
-      "goalsMiles": 4.0,
-      "ppMiles": 0.5,
-      "hatTrickMiles": 0.0,
-      "totalMiles": 4.5
-    },
-    "totalMiles": 4.5
-  },
-  "next_game": {
+  "total_miles": 2.5,
+  "last_updated": "2026-11-18T14:23:44.567618-08:00",
+  "today_date": "2026-11-18",
+  "yesterday_game": {
     "id": 2026020343,
     "date": "2026-11-17",
     "startTimeUTC": "2026-11-18T03:00:00Z",
@@ -77,20 +20,108 @@ window.SHARKS_DATA = {
     "oppName": "Flames",
     "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
     "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 2,
+    "oppScore": 5,
+    "result": "L",
+    "gameOutcome": "REG",
+    "goals": 2,
+    "oppPPGoals": 1,
+    "oppPPOpps": 3,
+    "oppEmptyPP": 2,
+    "oppPPSummary": "1/3",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "A. Gaudette",
+        "period": 1,
+        "time": "03:53",
+        "strength": "ev"
+      },
+      {
+        "name": "M. Marchment",
+        "period": 3,
+        "time": "15:22",
+        "strength": "pp"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 2.0,
+      "ppMiles": 0.5,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 2.5
+    },
+    "totalMiles": 2.5
+  },
+  "latest_completed_game": {
+    "id": 2026020343,
+    "date": "2026-11-17",
+    "startTimeUTC": "2026-11-18T03:00:00Z",
+    "isHome": true,
+    "oppAbbrev": "CGY",
+    "oppName": "Flames",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 2,
+    "oppScore": 5,
+    "result": "L",
+    "gameOutcome": "REG",
+    "goals": 2,
+    "oppPPGoals": 1,
+    "oppPPOpps": 3,
+    "oppEmptyPP": 2,
+    "oppPPSummary": "1/3",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "A. Gaudette",
+        "period": 1,
+        "time": "03:53",
+        "strength": "ev"
+      },
+      {
+        "name": "M. Marchment",
+        "period": 3,
+        "time": "15:22",
+        "strength": "pp"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 2.0,
+      "ppMiles": 0.5,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 2.5
+    },
+    "totalMiles": 2.5
+  },
+  "next_game": {
+    "id": 2026020372,
+    "date": "2026-11-21",
+    "startTimeUTC": "2026-11-22T03:00:00Z",
+    "isHome": true,
+    "oppAbbrev": "SEA",
+    "oppName": "Kraken",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
     "gameState": "FUT",
     "gameScheduleState": "OK"
   },
   "season_summary": {
-    "total_miles": 99.5,
-    "games_played": 27,
-    "record": "12-12-3",
+    "total_miles": 102.0,
+    "games_played": 28,
+    "record": "12-13-3",
     "wins": 12,
-    "losses": 12,
+    "losses": 13,
     "ot_losses": 3,
-    "total_goals": 80,
-    "total_empty_pp": 70,
+    "total_goals": 82,
+    "total_empty_pp": 72,
     "total_hat_tricks": 1,
-    "avg_miles_per_game": 3.69
+    "avg_miles_per_game": 3.64
   },
   "games": [
     {
@@ -1433,8 +1464,40 @@ window.SHARKS_DATA = {
       "oppName": "Flames",
       "oppLogo": "https://assets.nhle.com/logos/nhl/svg/CGY_light.svg",
       "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-      "gameState": "FUT",
-      "gameScheduleState": "OK"
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 2,
+      "oppScore": 5,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 2,
+      "oppPPGoals": 1,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "1/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "A. Gaudette",
+          "period": 1,
+          "time": "03:53",
+          "strength": "ev"
+        },
+        {
+          "name": "M. Marchment",
+          "period": 3,
+          "time": "15:22",
+          "strength": "pp"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 2.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 2.5
+      },
+      "totalMiles": 2.5
     },
     {
       "id": 2026020372,
