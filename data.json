@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "played": false,
   "sharks_score": 0,
   "opp_score": 0,
@@ -9,8 +9,8 @@
   "opp_empty_pp": 0,
   "hat_tricks": 0,
   "total_miles": 0.0,
-  "last_updated": "2026-11-20T13:59:53.143327-08:00",
-  "today_date": "2026-11-20",
+  "last_updated": "2026-11-21T12:41:15.609387-08:00",
+  "today_date": "2026-11-21",
   "yesterday_game": null,
   "latest_completed_game": {
     "id": 2026020343,
