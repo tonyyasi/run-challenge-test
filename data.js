@@ -1,74 +1,17 @@
 window.SHARKS_DATA = {
-  "date": "2026-11-22",
-  "played": false,
-  "sharks_score": 0,
-  "opp_score": 0,
-  "opp_name": "",
-  "goals": 0,
-  "pp_goals": 0,
-  "opp_empty_pp": 0,
+  "date": "2026-11-23",
+  "played": true,
+  "sharks_score": 2,
+  "opp_score": 5,
+  "opp_name": "MIN",
+  "goals": 2,
+  "pp_goals": 2,
+  "opp_empty_pp": 2,
   "hat_tricks": 0,
-  "total_miles": 0.0,
-  "last_updated": "2026-11-23T17:56:02.654433-08:00",
-  "today_date": "2026-11-23",
-  "yesterday_game": null,
-  "latest_completed_game": {
-    "id": 2026020372,
-    "date": "2026-11-21",
-    "startTimeUTC": "2026-11-22T03:00:00Z",
-    "isHome": true,
-    "oppAbbrev": "SEA",
-    "oppName": "Kraken",
-    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "gameState": "OFF",
-    "gameScheduleState": "OK",
-    "sharksScore": 4,
-    "oppScore": 3,
-    "result": "W",
-    "gameOutcome": "REG",
-    "goals": 4,
-    "oppPPGoals": 1,
-    "oppPPOpps": 2,
-    "oppEmptyPP": 1,
-    "oppPPSummary": "1/2",
-    "hatTricks": 0,
-    "hatTrickPlayers": [],
-    "goalScorers": [
-      {
-        "name": "M. Misa",
-        "period": 1,
-        "time": "06:26",
-        "strength": "ev"
-      },
-      {
-        "name": "N. Allan",
-        "period": 1,
-        "time": "10:29",
-        "strength": "ev"
-      },
-      {
-        "name": "M. Celebrini",
-        "period": 1,
-        "time": "16:31",
-        "strength": "pp"
-      },
-      {
-        "name": "I. Stenberg",
-        "period": 2,
-        "time": "07:47",
-        "strength": "pp"
-      }
-    ],
-    "milesBreakdown": {
-      "goalsMiles": 4.0,
-      "ppMiles": 0.25,
-      "hatTrickMiles": 0.0,
-      "totalMiles": 4.25
-    },
-    "totalMiles": 4.25
-  },
-  "next_game": {
+  "total_miles": 2.5,
+  "last_updated": "2026-11-24T15:40:30.984170-08:00",
+  "today_date": "2026-11-24",
+  "yesterday_game": {
     "id": 2026020384,
     "date": "2026-11-23",
     "startTimeUTC": "2026-11-24T03:00:00Z",
@@ -77,20 +20,108 @@ window.SHARKS_DATA = {
     "oppName": "Wild",
     "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
     "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 2,
+    "oppScore": 5,
+    "result": "L",
+    "gameOutcome": "REG",
+    "goals": 2,
+    "oppPPGoals": 1,
+    "oppPPOpps": 3,
+    "oppEmptyPP": 2,
+    "oppPPSummary": "1/3",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "T. Toffoli",
+        "period": 1,
+        "time": "10:47",
+        "strength": "pp"
+      },
+      {
+        "name": "A. Wennberg",
+        "period": 1,
+        "time": "17:29",
+        "strength": "ev"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 2.0,
+      "ppMiles": 0.5,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 2.5
+    },
+    "totalMiles": 2.5
+  },
+  "latest_completed_game": {
+    "id": 2026020384,
+    "date": "2026-11-23",
+    "startTimeUTC": "2026-11-24T03:00:00Z",
+    "isHome": true,
+    "oppAbbrev": "MIN",
+    "oppName": "Wild",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
+    "gameState": "OFF",
+    "gameScheduleState": "OK",
+    "sharksScore": 2,
+    "oppScore": 5,
+    "result": "L",
+    "gameOutcome": "REG",
+    "goals": 2,
+    "oppPPGoals": 1,
+    "oppPPOpps": 3,
+    "oppEmptyPP": 2,
+    "oppPPSummary": "1/3",
+    "hatTricks": 0,
+    "hatTrickPlayers": [],
+    "goalScorers": [
+      {
+        "name": "T. Toffoli",
+        "period": 1,
+        "time": "10:47",
+        "strength": "pp"
+      },
+      {
+        "name": "A. Wennberg",
+        "period": 1,
+        "time": "17:29",
+        "strength": "ev"
+      }
+    ],
+    "milesBreakdown": {
+      "goalsMiles": 2.0,
+      "ppMiles": 0.5,
+      "hatTrickMiles": 0.0,
+      "totalMiles": 2.5
+    },
+    "totalMiles": 2.5
+  },
+  "next_game": {
+    "id": 2026020398,
+    "date": "2026-11-25",
+    "startTimeUTC": "2026-11-26T03:00:00Z",
+    "isHome": false,
+    "oppAbbrev": "ANA",
+    "oppName": "Ducks",
+    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/ANA_light.svg",
+    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
     "gameState": "FUT",
     "gameScheduleState": "OK"
   },
   "season_summary": {
-    "total_miles": 106.25,
-    "games_played": 29,
-    "record": "13-13-3",
+    "total_miles": 108.75,
+    "games_played": 30,
+    "record": "13-14-3",
     "wins": 13,
-    "losses": 13,
+    "losses": 14,
     "ot_losses": 3,
-    "total_goals": 86,
-    "total_empty_pp": 73,
+    "total_goals": 88,
+    "total_empty_pp": 75,
     "total_hat_tricks": 1,
-    "avg_miles_per_game": 3.66
+    "avg_miles_per_game": 3.62
   },
   "games": [
     {
@@ -1533,8 +1564,40 @@ window.SHARKS_DATA = {
       "oppName": "Wild",
       "oppLogo": "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg",
       "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-      "gameState": "FUT",
-      "gameScheduleState": "OK"
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "sharksScore": 2,
+      "oppScore": 5,
+      "result": "L",
+      "gameOutcome": "REG",
+      "goals": 2,
+      "oppPPGoals": 1,
+      "oppPPOpps": 3,
+      "oppEmptyPP": 2,
+      "oppPPSummary": "1/3",
+      "hatTricks": 0,
+      "hatTrickPlayers": [],
+      "goalScorers": [
+        {
+          "name": "T. Toffoli",
+          "period": 1,
+          "time": "10:47",
+          "strength": "pp"
+        },
+        {
+          "name": "A. Wennberg",
+          "period": 1,
+          "time": "17:29",
+          "strength": "ev"
+        }
+      ],
+      "milesBreakdown": {
+        "goalsMiles": 2.0,
+        "ppMiles": 0.5,
+        "hatTrickMiles": 0.0,
+        "totalMiles": 2.5
+      },
+      "totalMiles": 2.5
     },
     {
       "id": 2026020398,
