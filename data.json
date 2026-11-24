@@ -1,72 +1,17 @@
 {
-  "date": "2026-11-21",
-  "played": true,
-  "sharks_score": 4,
-  "opp_score": 3,
-  "opp_name": "SEA",
-  "goals": 4,
-  "pp_goals": 1,
-  "opp_empty_pp": 1,
+  "date": "2026-11-22",
+  "played": false,
+  "sharks_score": 0,
+  "opp_score": 0,
+  "opp_name": "",
+  "goals": 0,
+  "pp_goals": 0,
+  "opp_empty_pp": 0,
   "hat_tricks": 0,
-  "total_miles": 4.25,
-  "last_updated": "2026-11-22T12:51:29.500956-08:00",
-  "today_date": "2026-11-22",
-  "yesterday_game": {
-    "id": 2026020372,
-    "date": "2026-11-21",
-    "startTimeUTC": "2026-11-22T03:00:00Z",
-    "isHome": true,
-    "oppAbbrev": "SEA",
-    "oppName": "Kraken",
-    "oppLogo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg",
-    "sharksLogo": "https://assets.nhle.com/logos/nhl/svg/SJS_light.svg",
-    "gameState": "OFF",
-    "gameScheduleState": "OK",
-    "sharksScore": 4,
-    "oppScore": 3,
-    "result": "W",
-    "gameOutcome": "REG",
-    "goals": 4,
-    "oppPPGoals": 1,
-    "oppPPOpps": 2,
-    "oppEmptyPP": 1,
-    "oppPPSummary": "1/2",
-    "hatTricks": 0,
-    "hatTrickPlayers": [],
-    "goalScorers": [
-      {
-        "name": "M. Misa",
-        "period": 1,
-        "time": "06:26",
-        "strength": "ev"
-      },
-      {
-        "name": "N. Allan",
-        "period": 1,
-        "time": "10:29",
-        "strength": "ev"
-      },
-      {
-        "name": "M. Celebrini",
-        "period": 1,
-        "time": "16:31",
-        "strength": "pp"
-      },
-      {
-        "name": "I. Stenberg",
-        "period": 2,
-        "time": "07:47",
-        "strength": "pp"
-      }
-    ],
-    "milesBreakdown": {
-      "goalsMiles": 4.0,
-      "ppMiles": 0.25,
-      "hatTrickMiles": 0.0,
-      "totalMiles": 4.25
-    },
-    "totalMiles": 4.25
-  },
+  "total_miles": 0.0,
+  "last_updated": "2026-11-23T17:56:02.654433-08:00",
+  "today_date": "2026-11-23",
+  "yesterday_game": null,
   "latest_completed_game": {
     "id": 2026020372,
     "date": "2026-11-21",
